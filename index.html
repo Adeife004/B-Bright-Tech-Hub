@@ -3,56 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="B Bright Tech Hub — professional technology training and solutions.">
-    <meta name="theme-color" content="#378f84">
+    <meta name="description" content="B Bright Tech Hub — Professional Technology Training and Solutions.">
+    <meta name="theme-color" content="#1a5c54">
 
-    <!-- Google Fonts: Inter (body) + Poppins (headings) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome 6 (free CDN) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- AOS (Animate On Scroll) -->
+    <!-- AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Favicon (optional — swap path if you have one) -->
     <link rel="icon" type="image/webp" href="asset/logo.webp">
-
     <title>B Bright Tech Hub</title>
-
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
 
-    <!-- header -->
     <header class="site-header">
         <nav class="navbar" role="navigation" aria-label="Main Navigation">
 
-            <!-- logo -->
+            <!-- LEFT: Logo -->
             <div class="navbar__logo">
-                <a href="#" aria-label="Home">
+                <a href="#" aria-label="B Bright Tech Hub Home">
                     <img src="asset/logo.webp" alt="B Bright Tech Hub Logo">
                 </a>
             </div>
 
-            <!-- hamburger (mobile) -->
-            <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <!-- navigation links -->
+            <!-- CENTER: Nav links -->
             <ul class="navbar__links" id="nav-menu">
-                <li><a href="#" class="navbar__link">Home</a></li>
-                <li><a href="#" class="navbar__link">About</a></li>
-                <li><a href="#" class="navbar__link">Services</a></li>
-                <li><a href="#" class="navbar__link">Contact</a></li>
-
-                <!-- Pages dropdown -->
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
                 <li class="navbar__dropdown" id="pages-dropdown">
                     <button class="navbar__link navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
                         Pages
@@ -61,35 +47,59 @@
                         </svg>
                     </button>
                     <ul class="navbar__dropdown-menu" role="menu">
-                        <li role="none"><a href="#" class="navbar__dropdown-item" role="menuitem">
+                        <li role="none"><a href="testimonials.html" class="navbar__dropdown-item" role="menuitem">
                             <i class="fa-regular fa-star" aria-hidden="true"></i> Testimonials
                         </a></li>
-                        <li role="none"><a href="#" class="navbar__dropdown-item" role="menuitem">
+                        <li role="none"><a href="programmes.html" class="navbar__dropdown-item" role="menuitem">
                             <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Programmes
                         </a></li>
                     </ul>
                 </li>
             </ul>
 
+            <!-- RIGHT: CTA buttons -->
+            <div class="navbar__actions">
+                <a href="#" class="btn-login">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    Login
+                </a>
+                <a href="#" class="btn-apply">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </nav>
     </header>
 
-    <!-- hero section -->
+    <!-- Hero -->
     <main class="hero">
         <div class="hero__content" data-aos="fade-up" data-aos-duration="800">
-            <h1>Welcome to Our Site</h1>
-            <p>Your professional experience starts here.</p>
-            <a href="#" class="btn-primary">
-                Get Started <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
+            <span class="hero__badge">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i> New cohort enrolling now
+            </span>
+            <h1>Welcome to <span class="highlight">B Bright</span> Tech Hub</h1>
+            <p>Your professional tech journey starts here. Learn. Build. Excel.</p>
+            <div class="hero__btns">
+                <a href="#" class="btn-primary">
+                    Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn-outline">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i> Watch Overview
+                </a>
+            </div>
         </div>
     </main>
 
-    <!-- AOS init + main script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0afc/yuadhlzz0nK6YRC/MVaLFZVZosyIQ/gYt5phA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        AOS.init({ once: true, offset: 60 });
-    </script>
+    <script>AOS.init({ once: true, offset: 60 });</script>
     <script src="/scripts/index.js"></script>
 </body>
 </html>
