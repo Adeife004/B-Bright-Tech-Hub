@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="B Bright Tech Hub — Professional Technology Training and Solutions.">
+    <meta name="description" content="B Bright Tech Hub — professional technology training and solutions.">
     <meta name="theme-color" content="#1a5c54">
 
     <!-- Google Fonts -->
@@ -59,11 +59,11 @@
 
             <!-- RIGHT: CTA buttons -->
             <div class="navbar__actions">
-                <a href="#" class="btn-login">
+                <a href="login.html" class="btn-login">
                     <i class="fa-regular fa-user" aria-hidden="true"></i>
                     Login
                 </a>
-                <a href="#" class="btn-apply">
+                <a href="apply.html" class="btn-apply">
                     Apply Now
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
@@ -81,20 +81,65 @@
 
     <!-- Hero -->
     <main class="hero">
-        <div class="hero__content" data-aos="fade-up" data-aos-duration="800">
-            <span class="hero__badge">
+
+        <!-- animated background canvas -->
+        <canvas id="hero-canvas"></canvas>
+
+        <!-- floating glow orbs -->
+        <div class="orb orb--1" aria-hidden="true"></div>
+        <div class="orb orb--2" aria-hidden="true"></div>
+        <div class="orb orb--3" aria-hidden="true"></div>
+
+        <div class="hero__content">
+
+            <span class="hero__badge" data-aos="fade-down" data-aos-duration="600">
                 <i class="fa-solid fa-bolt" aria-hidden="true"></i> New cohort enrolling now
             </span>
-            <h1>Welcome to <span class="highlight">B Bright</span> Tech Hub</h1>
-            <p>Your professional tech journey starts here. Learn. Build. Excel.</p>
-            <div class="hero__btns">
-                <a href="#" class="btn-primary">
+
+            <!-- typewriter headline -->
+            <h1 class="hero__heading" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+                <span class="hero__heading-static">Welcome to </span><span class="hero__heading-brand">B Bright<span class="brand-dot">.</span></span>
+            </h1>
+
+            <!-- rotating tagline (typewriter) -->
+            <div class="hero__typewriter-wrap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                <span class="hero__typewriter-prefix">We are </span>
+                <span class="hero__typewriter" id="typewriter" aria-live="polite"></span>
+                <span class="hero__cursor" aria-hidden="true">|</span>
+            </div>
+
+            <p class="hero__sub" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                Join thousands of students transforming their careers through cutting-edge tech education. Your future starts now.
+            </p>
+
+            <div class="hero__btns" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                <a href="apply.html" class="btn-primary">
                     Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
-                <a href="#" class="btn-outline">
-                    <i class="fa-solid fa-play" aria-hidden="true"></i> Watch Overview
+                <a href="#overview" class="btn-outline">
+                    <span class="btn-outline__icon"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
+                    Watch Overview
                 </a>
             </div>
+
+            <!-- stat chips -->
+            <div class="hero__stats" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+                <div class="stat">
+                    <span class="stat__num">2,400+</span>
+                    <span class="stat__label">Graduates</span>
+                </div>
+                <div class="stat__divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat__num">98%</span>
+                    <span class="stat__label">Job placement</span>
+                </div>
+                <div class="stat__divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat__num">40+</span>
+                    <span class="stat__label">Programmes</span>
+                </div>
+            </div>
+
         </div>
     </main>
 
