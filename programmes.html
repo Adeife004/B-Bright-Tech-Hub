@@ -75,7 +75,7 @@
 
         <div class="prog-hero__inner">
             <span class="prog-hero__eyebrow">
-                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> 40+ Programmes
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> 17+ Programmes
             </span>
             <h1>Find Your <span class="text-accent">Path</span> in Tech</h1>
             <p>From your first line of code to your first job offer — every programme is built with employers, mapped to real outcomes.</p>
@@ -95,12 +95,11 @@
 
             <div class="filter-group" role="group" aria-label="Filter by category">
                 <button class="filter-chip active" data-filter="category" data-value="all">All</button>
-                <button class="filter-chip" data-filter="category" data-value="development">Development</button>
-                <button class="filter-chip" data-filter="category" data-value="data">Data &amp; AI</button>
-                <button class="filter-chip" data-filter="category" data-value="security">Security</button>
-                <button class="filter-chip" data-filter="category" data-value="design">Design</button>
-                <button class="filter-chip" data-filter="category" data-value="cloud">Cloud &amp; Infra</button>
-                <button class="filter-chip" data-filter="category" data-value="business">Business &amp; Soft Skills</button>
+                <button class="filter-chip" data-filter="category" data-value="tech-skills">Tech Skills Training</button>
+                <button class="filter-chip" data-filter="category" data-value="emerging-tech">Emerging Technologies</button>
+                <button class="filter-chip" data-filter="category" data-value="creative-media">Creative Media</button>
+                <button class="filter-chip" data-filter="category" data-value="school-solutions">School Solutions</button>
+                <button class="filter-chip" data-filter="category" data-value="learning-programs">Learning Programs</button>
             </div>
 
             <div class="filter-group filter-group--secondary" role="group" aria-label="Filter by level">
@@ -121,8 +120,21 @@
     <section class="catalogue">
         <div class="catalogue__grid" id="catalogue-grid">
 
-            <!-- ===== DEVELOPMENT ===== -->
-            <article class="cat-card" data-category="development" data-level="beginner" data-name="web development html css javascript">
+            <!-- ===== TECH SKILLS TRAINING ===== -->
+            <article class="cat-card" data-category="tech-skills" data-level="beginner" data-name="digital literacy computer basics internet">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-display"></i></span>
+                </div>
+                <h3>Digital Literacy</h3>
+                <p>Computer basics, internet safety and essential digital tools — the foundation for everything else.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#digital-literacy" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="tech-skills" data-level="beginner" data-name="web development html css javascript react">
                 <div class="cat-card__top">
                     <span class="cat-card__icon"><i class="fa-solid fa-code"></i></span>
                     <span class="cat-card__badge cat-card__badge--popular">Most Popular</span>
@@ -133,119 +145,10 @@
                     <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 16 weeks</span>
                     <span class="level-tag level-tag--beginner">Beginner</span>
                 </div>
-                <a href="programme-detail.html?p=web-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="services.html#web-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </article>
 
-            <article class="cat-card" data-category="development" data-level="intermediate" data-name="mobile development react native ios android">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-mobile-screen"></i></span>
-                </div>
-                <h3>Mobile Development</h3>
-                <p>Ship iOS and Android apps with React Native — one codebase, two platforms.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 14 weeks</span>
-                    <span class="level-tag level-tag--intermediate">Intermediate</span>
-                </div>
-                <a href="programme-detail.html?p=mobile-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="development" data-level="advanced" data-name="backend engineering node express databases">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-server"></i></span>
-                </div>
-                <h3>Backend Engineering</h3>
-                <p>Node.js, databases, REST &amp; GraphQL APIs, authentication and system design.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 18 weeks</span>
-                    <span class="level-tag level-tag--advanced">Advanced</span>
-                </div>
-                <a href="programme-detail.html?p=backend-engineering" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="development" data-level="beginner" data-name="game development unity">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-gamepad"></i></span>
-                    <span class="cat-card__badge cat-card__badge--new">New</span>
-                </div>
-                <h3>Game Development</h3>
-                <p>Build 2D and 3D games in Unity, from mechanics to publishing on Steam.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 weeks</span>
-                    <span class="level-tag level-tag--beginner">Beginner</span>
-                </div>
-                <a href="programme-detail.html?p=game-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <!-- ===== DATA & AI ===== -->
-            <article class="cat-card cat-card--featured" data-category="data" data-level="intermediate" data-name="ai data science machine learning python">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-brain"></i></span>
-                    <span class="cat-card__badge cat-card__badge--new">New</span>
-                </div>
-                <h3>AI &amp; Data Science</h3>
-                <p>Python, pandas, scikit-learn and real datasets — train your first ML model.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 20 weeks</span>
-                    <span class="level-tag level-tag--intermediate">Intermediate</span>
-                </div>
-                <a href="programme-detail.html?p=ai-data-science" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="data" data-level="beginner" data-name="data analysis excel sql power bi">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-chart-line"></i></span>
-                </div>
-                <h3>Data Analysis</h3>
-                <p>Excel, SQL and Power BI — turn raw spreadsheets into business decisions.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 weeks</span>
-                    <span class="level-tag level-tag--beginner">Beginner</span>
-                </div>
-                <a href="programme-detail.html?p=data-analysis" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="data" data-level="advanced" data-name="deep learning neural networks pytorch">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-network-wired"></i></span>
-                </div>
-                <h3>Deep Learning</h3>
-                <p>Neural networks, PyTorch and computer vision — for those ready to go deeper.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 16 weeks</span>
-                    <span class="level-tag level-tag--advanced">Advanced</span>
-                </div>
-                <a href="programme-detail.html?p=deep-learning" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <!-- ===== SECURITY ===== -->
-            <article class="cat-card" data-category="security" data-level="intermediate" data-name="cybersecurity ethical hacking network">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-shield-halved"></i></span>
-                </div>
-                <h3>Cybersecurity</h3>
-                <p>Network security, ethical hacking and incident response in safe virtual labs.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 18 weeks</span>
-                    <span class="level-tag level-tag--intermediate">Intermediate</span>
-                </div>
-                <a href="programme-detail.html?p=cybersecurity" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="security" data-level="advanced" data-name="penetration testing comptia security certification">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-user-secret"></i></span>
-                </div>
-                <h3>Penetration Testing</h3>
-                <p>Offensive security techniques and CompTIA Security+ certification prep.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 14 weeks</span>
-                    <span class="level-tag level-tag--advanced">Advanced</span>
-                </div>
-                <a href="programme-detail.html?p=penetration-testing" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <!-- ===== DESIGN ===== -->
-            <article class="cat-card" data-category="design" data-level="beginner" data-name="ui ux design figma">
+            <article class="cat-card" data-category="tech-skills" data-level="beginner" data-name="ui ux design figma prototyping">
                 <div class="cat-card__top">
                     <span class="cat-card__icon"><i class="fa-solid fa-pen-ruler"></i></span>
                 </div>
@@ -255,101 +158,196 @@
                     <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 weeks</span>
                     <span class="level-tag level-tag--beginner">Beginner</span>
                 </div>
-                <a href="programme-detail.html?p=ui-ux-design" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="services.html#ui-ux-design" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </article>
 
-            <article class="cat-card" data-category="design" data-level="beginner" data-name="graphic design photoshop illustrator branding">
+            <article class="cat-card" data-category="tech-skills" data-level="intermediate" data-name="data analysis excel sql power bi">
                 <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-palette"></i></span>
+                    <span class="cat-card__icon"><i class="fa-solid fa-chart-line"></i></span>
                 </div>
-                <h3>Graphic Design</h3>
-                <p>Photoshop, Illustrator and brand identity design for digital and print.</p>
+                <h3>Data Analysis</h3>
+                <p>Excel, SQL and Power BI — turn raw spreadsheets into business decisions.</p>
                 <div class="cat-card__meta">
                     <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 weeks</span>
-                    <span class="level-tag level-tag--beginner">Beginner</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
                 </div>
-                <a href="programme-detail.html?p=graphic-design" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="services.html#data-analysis" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </article>
 
-            <article class="cat-card" data-category="design" data-level="intermediate" data-name="motion graphics animation after effects">
+            <article class="cat-card cat-card--featured" data-category="tech-skills" data-level="beginner" data-name="vibe coding ai assisted development prompt">
                 <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-film"></i></span>
+                    <span class="cat-card__icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
                     <span class="cat-card__badge cat-card__badge--new">New</span>
                 </div>
-                <h3>Motion Graphics</h3>
-                <p>After Effects animation for ads, explainer videos and social content.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
-                    <span class="level-tag level-tag--intermediate">Intermediate</span>
-                </div>
-                <a href="programme-detail.html?p=motion-graphics" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <!-- ===== CLOUD & INFRA ===== -->
-            <article class="cat-card" data-category="cloud" data-level="intermediate" data-name="cloud devops aws docker kubernetes">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-cloud"></i></span>
-                </div>
-                <h3>Cloud &amp; DevOps</h3>
-                <p>AWS, Docker, Kubernetes and CI/CD pipelines — industry certs included.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 16 weeks</span>
-                    <span class="level-tag level-tag--intermediate">Intermediate</span>
-                </div>
-                <a href="programme-detail.html?p=cloud-devops" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="cloud" data-level="advanced" data-name="site reliability engineering infrastructure terraform">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-server"></i></span>
-                </div>
-                <h3>Site Reliability Engineering</h3>
-                <p>Infrastructure as code, Terraform, monitoring and on-call best practices.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 14 weeks</span>
-                    <span class="level-tag level-tag--advanced">Advanced</span>
-                </div>
-                <a href="programme-detail.html?p=sre" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <!-- ===== BUSINESS & SOFT SKILLS ===== -->
-            <article class="cat-card" data-category="business" data-level="beginner" data-name="product management agile scrum">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-diagram-project"></i></span>
-                </div>
-                <h3>Product Management</h3>
-                <p>Agile, Scrum and roadmapping — turn ideas into shippable products.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
-                    <span class="level-tag level-tag--beginner">Beginner</span>
-                </div>
-                <a href="programme-detail.html?p=product-management" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="business" data-level="beginner" data-name="digital marketing seo social media">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-bullhorn"></i></span>
-                </div>
-                <h3>Digital Marketing</h3>
-                <p>SEO, social media strategy and analytics for growing a digital presence.</p>
-                <div class="cat-card__meta">
-                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
-                    <span class="level-tag level-tag--beginner">Beginner</span>
-                </div>
-                <a href="programme-detail.html?p=digital-marketing" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="cat-card" data-category="business" data-level="intermediate" data-name="technical writing documentation communication">
-                <div class="cat-card__top">
-                    <span class="cat-card__icon"><i class="fa-solid fa-pen-nib"></i></span>
-                </div>
-                <h3>Technical Writing</h3>
-                <p>Documentation, API references and communicating complex ideas clearly.</p>
+                <h3>Vibe Coding</h3>
+                <p>Build real apps using AI coding assistants — learn to prompt, iterate and ship without writing every line by hand.</p>
                 <div class="cat-card__meta">
                     <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#vibe-coding" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== EMERGING TECHNOLOGIES ===== -->
+            <article class="cat-card" data-category="emerging-tech" data-level="intermediate" data-name="robotics arduino sensors automation">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-robot"></i></span>
+                </div>
+                <h3>Robotics</h3>
+                <p>Arduino, sensors and automation — design, build and program your own robots.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 weeks</span>
                     <span class="level-tag level-tag--intermediate">Intermediate</span>
                 </div>
-                <a href="programme-detail.html?p=technical-writing" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="services.html#robotics" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="emerging-tech" data-level="intermediate" data-name="vr ar virtual reality augmented reality">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-vr-cardboard"></i></span>
+                    <span class="cat-card__badge cat-card__badge--new">New</span>
+                </div>
+                <h3>VR &amp; AR</h3>
+                <p>Build immersive virtual and augmented reality experiences for the next generation of devices.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="services.html#vr-ar" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="emerging-tech" data-level="beginner" data-name="game development unity">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-gamepad"></i></span>
+                </div>
+                <h3>Game Development</h3>
+                <p>Build 2D and 3D games in Unity, from mechanics to publishing on Steam.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#game-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== CREATIVE MEDIA ===== -->
+            <article class="cat-card" data-category="creative-media" data-level="intermediate" data-name="3d modelling blender rendering">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-cube"></i></span>
+                </div>
+                <h3>3D Modelling</h3>
+                <p>Blender fundamentals — model, texture and render 3D objects and environments.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="services.html#3d-modelling" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="creative-media" data-level="beginner" data-name="2d animation motion graphics after effects">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-film"></i></span>
+                </div>
+                <h3>2D Animation</h3>
+                <p>Frame-by-frame and motion graphics animation for ads, explainers and social content.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#2d-animation" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== SCHOOL SOLUTIONS ===== -->
+            <article class="cat-card" data-category="school-solutions" data-level="beginner" data-name="in-school coding programs curriculum">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-school"></i></span>
+                </div>
+                <h3>In-School Coding Programs</h3>
+                <p>A turnkey coding curriculum delivered directly in your school, for any grade level.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Termly</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#in-school-coding" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="school-solutions" data-level="beginner" data-name="in-school robotics programs curriculum">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-microchip"></i></span>
+                </div>
+                <h3>In-School Robotics Programs</h3>
+                <p>Hands-on robotics kits and lesson plans, brought directly into the classroom.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Termly</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#in-school-robotics" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="school-solutions" data-level="advanced" data-name="teacher training professional development">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-chalkboard-user"></i></span>
+                </div>
+                <h3>Teacher Training</h3>
+                <p>Equip educators to confidently teach tech skills — workshops and certification included.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 4 weeks</span>
+                    <span class="level-tag level-tag--advanced">Advanced</span>
+                </div>
+                <a href="services.html#teacher-training" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="school-solutions" data-level="advanced" data-name="educational consultation curriculum design schools">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-clipboard-list"></i></span>
+                </div>
+                <h3>Educational Consultation</h3>
+                <p>Strategic guidance for schools building or scaling their tech-education offering.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Custom</span>
+                    <span class="level-tag level-tag--advanced">Advanced</span>
+                </div>
+                <a href="services.html#educational-consultation" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== LEARNING PROGRAMS ===== -->
+            <article class="cat-card" data-category="learning-programs" data-level="beginner" data-name="after school classes weekday evening">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-book-open"></i></span>
+                </div>
+                <h3>After-School Classes</h3>
+                <p>Weekday evening sessions, 3pm – 6pm, for secondary and tertiary students.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Ongoing</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="after-school.html" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="learning-programs" data-level="beginner" data-name="weekend classes saturday sunday">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-calendar-week"></i></span>
+                </div>
+                <h3>Weekend Classes</h3>
+                <p>Saturday sessions for learners who want focused, intensive weekend study time.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Ongoing</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="services.html#weekend-classes" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card cat-card--featured" data-category="learning-programs" data-level="beginner" data-name="holiday classes july of tech summer">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-sun"></i></span>
+                    <span class="cat-card__badge cat-card__badge--popular">Flagship</span>
+                </div>
+                <h3>Holiday Classes</h3>
+                <p>Intensive holiday-period programmes — including our flagship July of Tech and Summer Classes.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Seasonal</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="july-of-tech.html" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </article>
 
         </div>
