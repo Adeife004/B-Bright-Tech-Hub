@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore all programmes at B Bright Tech Hub — Web Development, AI, Cybersecurity, Mobile, Cloud and more.">
+    <meta name="theme-color" content="#1a5c54">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="icon" type="image/webp" href="asset/logo.webp">
+    <title>Programmes — B Bright Tech Hub</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/programmes.css">
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVBAR (same as index.html) ============ -->
+    <header class="site-header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="navbar__logo">
+                <a href="index.html" aria-label="B Bright Tech Hub Home">
+                    <img src="asset/logo.webp" alt="B Bright Tech Hub Logo">
+                </a>
+            </div>
+
+            <ul class="navbar__links" id="nav-menu">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
+                <li class="navbar__dropdown" id="pages-dropdown">
+                    <button class="navbar__link navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                        <svg class="navbar__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <ul class="navbar__dropdown-menu" role="menu">
+                        <li role="none"><a href="testimonials.html" class="navbar__dropdown-item" role="menuitem">
+                            <i class="fa-regular fa-star" aria-hidden="true"></i> Testimonials
+                        </a></li>
+                        <li role="none"><a href="programmes.html" class="navbar__dropdown-item active" role="menuitem">
+                            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Programmes
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="mobile-cta-row">
+                    <a href="login.html" class="btn-login"><i class="fa-regular fa-user" aria-hidden="true"></i> Login</a>
+                    <a href="apply.html" class="btn-apply">Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+
+            <div class="navbar__actions">
+                <a href="login.html" class="btn-login"><i class="fa-regular fa-user" aria-hidden="true"></i> Login</a>
+                <a href="apply.html" class="btn-apply">Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="ham-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="prog-hero">
+        <div class="bg-grid" aria-hidden="true"></div>
+        <div class="orb orb--a" aria-hidden="true"></div>
+        <div class="orb orb--b" aria-hidden="true"></div>
+
+        <div class="prog-hero__inner">
+            <span class="prog-hero__eyebrow">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> 40+ Programmes
+            </span>
+            <h1>Find Your <span class="text-accent">Path</span> in Tech</h1>
+            <p>From your first line of code to your first job offer — every programme is built with employers, mapped to real outcomes.</p>
+
+            <!-- search -->
+            <div class="prog-search">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" id="prog-search-input" placeholder="Search programmes... e.g. 'Python' or 'design'">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ FILTER BAR ============ -->
+    <section class="filter-bar">
+        <div class="filter-bar__inner">
+
+            <div class="filter-group" role="group" aria-label="Filter by category">
+                <button class="filter-chip active" data-filter="category" data-value="all">All</button>
+                <button class="filter-chip" data-filter="category" data-value="development">Development</button>
+                <button class="filter-chip" data-filter="category" data-value="data">Data &amp; AI</button>
+                <button class="filter-chip" data-filter="category" data-value="security">Security</button>
+                <button class="filter-chip" data-filter="category" data-value="design">Design</button>
+                <button class="filter-chip" data-filter="category" data-value="cloud">Cloud &amp; Infra</button>
+                <button class="filter-chip" data-filter="category" data-value="business">Business &amp; Soft Skills</button>
+            </div>
+
+            <div class="filter-group filter-group--secondary" role="group" aria-label="Filter by level">
+                <select id="level-filter" class="filter-select">
+                    <option value="all">All levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+        </div>
+        <p class="filter-results" id="filter-results-count" aria-live="polite"></p>
+    </section>
+
+
+    <!-- ============ PROGRAMME GRID ============ -->
+    <section class="catalogue">
+        <div class="catalogue__grid" id="catalogue-grid">
+
+            <!-- ===== DEVELOPMENT ===== -->
+            <article class="cat-card" data-category="development" data-level="beginner" data-name="web development html css javascript">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-code"></i></span>
+                    <span class="cat-card__badge cat-card__badge--popular">Most Popular</span>
+                </div>
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, React and backend fundamentals — build full-stack apps from scratch.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 16 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=web-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="development" data-level="intermediate" data-name="mobile development react native ios android">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-mobile-screen"></i></span>
+                </div>
+                <h3>Mobile Development</h3>
+                <p>Ship iOS and Android apps with React Native — one codebase, two platforms.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 14 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="programme-detail.html?p=mobile-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="development" data-level="advanced" data-name="backend engineering node express databases">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-server"></i></span>
+                </div>
+                <h3>Backend Engineering</h3>
+                <p>Node.js, databases, REST &amp; GraphQL APIs, authentication and system design.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 18 weeks</span>
+                    <span class="level-tag level-tag--advanced">Advanced</span>
+                </div>
+                <a href="programme-detail.html?p=backend-engineering" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="development" data-level="beginner" data-name="game development unity">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-gamepad"></i></span>
+                    <span class="cat-card__badge cat-card__badge--new">New</span>
+                </div>
+                <h3>Game Development</h3>
+                <p>Build 2D and 3D games in Unity, from mechanics to publishing on Steam.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=game-development" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== DATA & AI ===== -->
+            <article class="cat-card cat-card--featured" data-category="data" data-level="intermediate" data-name="ai data science machine learning python">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-brain"></i></span>
+                    <span class="cat-card__badge cat-card__badge--new">New</span>
+                </div>
+                <h3>AI &amp; Data Science</h3>
+                <p>Python, pandas, scikit-learn and real datasets — train your first ML model.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 20 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="programme-detail.html?p=ai-data-science" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="data" data-level="beginner" data-name="data analysis excel sql power bi">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-chart-line"></i></span>
+                </div>
+                <h3>Data Analysis</h3>
+                <p>Excel, SQL and Power BI — turn raw spreadsheets into business decisions.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=data-analysis" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="data" data-level="advanced" data-name="deep learning neural networks pytorch">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-network-wired"></i></span>
+                </div>
+                <h3>Deep Learning</h3>
+                <p>Neural networks, PyTorch and computer vision — for those ready to go deeper.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 16 weeks</span>
+                    <span class="level-tag level-tag--advanced">Advanced</span>
+                </div>
+                <a href="programme-detail.html?p=deep-learning" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== SECURITY ===== -->
+            <article class="cat-card" data-category="security" data-level="intermediate" data-name="cybersecurity ethical hacking network">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-shield-halved"></i></span>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p>Network security, ethical hacking and incident response in safe virtual labs.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 18 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="programme-detail.html?p=cybersecurity" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="security" data-level="advanced" data-name="penetration testing comptia security certification">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-user-secret"></i></span>
+                </div>
+                <h3>Penetration Testing</h3>
+                <p>Offensive security techniques and CompTIA Security+ certification prep.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 14 weeks</span>
+                    <span class="level-tag level-tag--advanced">Advanced</span>
+                </div>
+                <a href="programme-detail.html?p=penetration-testing" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== DESIGN ===== -->
+            <article class="cat-card" data-category="design" data-level="beginner" data-name="ui ux design figma">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-pen-ruler"></i></span>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Figma, user research and prototyping — design products people love to use.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=ui-ux-design" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="design" data-level="beginner" data-name="graphic design photoshop illustrator branding">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-palette"></i></span>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>Photoshop, Illustrator and brand identity design for digital and print.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=graphic-design" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="design" data-level="intermediate" data-name="motion graphics animation after effects">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-film"></i></span>
+                    <span class="cat-card__badge cat-card__badge--new">New</span>
+                </div>
+                <h3>Motion Graphics</h3>
+                <p>After Effects animation for ads, explainer videos and social content.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="programme-detail.html?p=motion-graphics" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== CLOUD & INFRA ===== -->
+            <article class="cat-card" data-category="cloud" data-level="intermediate" data-name="cloud devops aws docker kubernetes">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-cloud"></i></span>
+                </div>
+                <h3>Cloud &amp; DevOps</h3>
+                <p>AWS, Docker, Kubernetes and CI/CD pipelines — industry certs included.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 16 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="programme-detail.html?p=cloud-devops" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="cloud" data-level="advanced" data-name="site reliability engineering infrastructure terraform">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-server"></i></span>
+                </div>
+                <h3>Site Reliability Engineering</h3>
+                <p>Infrastructure as code, Terraform, monitoring and on-call best practices.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 14 weeks</span>
+                    <span class="level-tag level-tag--advanced">Advanced</span>
+                </div>
+                <a href="programme-detail.html?p=sre" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- ===== BUSINESS & SOFT SKILLS ===== -->
+            <article class="cat-card" data-category="business" data-level="beginner" data-name="product management agile scrum">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-diagram-project"></i></span>
+                </div>
+                <h3>Product Management</h3>
+                <p>Agile, Scrum and roadmapping — turn ideas into shippable products.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=product-management" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="business" data-level="beginner" data-name="digital marketing seo social media">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-bullhorn"></i></span>
+                </div>
+                <h3>Digital Marketing</h3>
+                <p>SEO, social media strategy and analytics for growing a digital presence.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 weeks</span>
+                    <span class="level-tag level-tag--beginner">Beginner</span>
+                </div>
+                <a href="programme-detail.html?p=digital-marketing" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="cat-card" data-category="business" data-level="intermediate" data-name="technical writing documentation communication">
+                <div class="cat-card__top">
+                    <span class="cat-card__icon"><i class="fa-solid fa-pen-nib"></i></span>
+                </div>
+                <h3>Technical Writing</h3>
+                <p>Documentation, API references and communicating complex ideas clearly.</p>
+                <div class="cat-card__meta">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 weeks</span>
+                    <span class="level-tag level-tag--intermediate">Intermediate</span>
+                </div>
+                <a href="programme-detail.html?p=technical-writing" class="cat-card__link">View Details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+
+        </div>
+
+        <!-- empty state -->
+        <div class="catalogue__empty" id="catalogue-empty" hidden>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <h3>No programmes found</h3>
+            <p>Try a different search term or clear your filters.</p>
+            <button class="btn-clear-filters" id="btn-clear-filters">Clear filters</button>
+        </div>
+    </section>
+
+
+    <!-- ============ SPECIAL TRACKS BANNER ============ -->
+    <section class="special-tracks">
+        <div class="special-tracks__inner">
+            <div class="special-tracks__text">
+                <span class="section-eyebrow">
+                    <span class="eyebrow-line" aria-hidden="true"></span> Special Formats <span class="eyebrow-line" aria-hidden="true"></span>
+                </span>
+                <h2>Not Just <span class="text-teal">What</span> — But <span class="text-teal">When</span></h2>
+                <p>Every programme above can be taken through one of our three special tracks, built around real schedules.</p>
+            </div>
+            <div class="special-tracks__links">
+                <a href="july-of-tech.html" class="special-track-pill"><i class="fa-solid fa-sun" aria-hidden="true"></i> July of Tech</a>
+                <a href="summer-classes.html" class="special-track-pill"><i class="fa-solid fa-umbrella-beach" aria-hidden="true"></i> Summer Classes</a>
+                <a href="after-school.html" class="special-track-pill"><i class="fa-solid fa-book-open" aria-hidden="true"></i> After School</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-banner" id="cta">
+        <div class="cta-banner__orb cta-banner__orb--1" aria-hidden="true"></div>
+        <div class="cta-banner__orb cta-banner__orb--2" aria-hidden="true"></div>
+        <div class="cta-banner__inner">
+            <span class="cta-banner__eyebrow"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Limited spots per cohort</span>
+            <h2>Found Your Programme? <br>Let's <span class="cta-highlight">Get Started</span></h2>
+            <p>Apply in under 5 minutes — no CV, no prior experience needed.</p>
+            <div class="cta-banner__btns">
+                <a href="apply.html" class="btn-apply">Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="contact.html" class="cta-banner__ghost">Have questions? <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo-link" aria-label="B Bright Tech Hub home">
+                    <img src="asset/logo.webp" alt="B Bright Tech Hub">
+                </a>
+                <p class="footer__tagline">The place where tech careers are built. Come learn, build, and grow with us.</p>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="footer__social" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="footer__social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="programmes.html">Programmes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Programmes</h3>
+                    <ul>
+                        <li><a href="july-of-tech.html">July of Tech</a></li>
+                        <li><a href="summer-classes.html">Summer Classes</a></li>
+                        <li><a href="after-school.html">After School</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact</h3>
+                    <ul class="footer__contact-list">
+                        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>123 Tech Avenue, Lagos, Nigeria</span></li>
+                        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:hello@bbrighttechhub.com">hello@bbrighttechhub.com</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; <span id="footer-year"></span> B Bright Tech Hub. All rights reserved.</p>
+            <div class="footer__legal">
+                <a href="privacy.html">Privacy Policy</a><span aria-hidden="true">·</span><a href="terms.html">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll back to top">
+        <span class="scroll-top__ring" aria-hidden="true"></span>
+        <svg class="scroll-top__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <svg class="scroll-top__progress" viewBox="0 0 42 42" aria-hidden="true">
+            <circle class="scroll-top__track" cx="21" cy="21" r="18"/>
+            <circle class="scroll-top__fill" cx="21" cy="21" r="18" id="scroll-progress-ring"/>
+        </svg>
+    </button>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/programmes.js"></script>
+</body>
+</html>

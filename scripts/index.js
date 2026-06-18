@@ -426,9 +426,58 @@
 
 /* ============================================================
    FOOTER — auto year
-   Append to bottom of scripts/index.js
    ============================================================ */
 (function () {
   const yr = document.getElementById("footer-year");
   if (yr) yr.textContent = new Date().getFullYear();
+})();
+
+
+/* ============================================================
+   SCROLL TO TOP
+   ============================================================ */
+(function () {
+    'use strict';
+
+    const btn        = document.getElementById('scroll-top');
+    const progressEl = document.getElementById('scroll-progress-ring');
+    if (!btn) return;
+
+    const CIRCUMFERENCE = 113.1; /* 2π × r(18) */
+    const SHOW_AFTER    = 320;   /* px scrolled before button appears */
+
+    function updateButton() {
+        const scrolled   = window.scrollY;
+        const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+        const progress   = docHeight > 0 ? scrolled / docHeight : 0;
+
+        /* show / hide */
+        btn.classList.toggle('visible', scrolled > SHOW_AFTER);
+
+        /* drive progress ring */
+        if (progressEl) {
+            progressEl.style.strokeDashoffset =
+                CIRCUMFERENCE - progress * CIRCUMFERENCE;
+        }
+    }
+
+    /* throttled via rAF */
+    let ticking = false;
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            requestAnimationFrame(function () {
+                updateButton();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    /* smooth scroll back to top */
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    updateButton(); /* initialise */
+
 })();

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login or create an account — B Bright Tech Hub">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="icon" type="image/webp" href="asset/logo.webp">
+    <title>Login — B Bright Tech Hub</title>
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+
+    <!-- back link -->
+    <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        Back to site
+    </a>
+
+    <!-- particle canvas -->
+    <canvas id="login-canvas"></canvas>
+
+    <!-- background orbs -->
+    <div class="orb orb--a" aria-hidden="true"></div>
+    <div class="orb orb--b" aria-hidden="true"></div>
+
+    <!-- grid texture -->
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <main class="login-wrap">
+
+        <!-- left panel — brand side -->
+        <div class="brand-panel" aria-hidden="true">
+            <div class="brand-panel__inner">
+                <div class="brand-panel__logo">
+                    <img src="asset/logo.webp" alt="B Bright Tech Hub">
+                </div>
+                <h1 class="brand-panel__headline">
+                    Build the<br>
+                    <span class="brand-panel__accent">future</span><br>
+                    with code.
+                </h1>
+                <p class="brand-panel__sub">
+                    Join 2,400+ graduates who turned ambition into a tech career.
+                </p>
+                <ul class="brand-panel__perks">
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Access all programme materials</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Track your learning progress</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Connect with your cohort</li>
+                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Download your certificates</li>
+                </ul>
+            </div>
+
+            <!-- floating code snippet decoration -->
+            <div class="code-snippet" aria-hidden="true">
+                <span class="cs-line"><span class="cs-kw">const</span> <span class="cs-var">career</span> = <span class="cs-fn">BBright</span><span class="cs-p">(</span><span class="cs-str">'you'</span><span class="cs-p">);</span></span>
+                <span class="cs-line"><span class="cs-var">career</span><span class="cs-p">.</span><span class="cs-fn">launch</span><span class="cs-p">();</span></span>
+                <span class="cs-line cs-comment">// 🚀 success</span>
+            </div>
+        </div>
+
+        <!-- right panel — flip card -->
+        <div class="card-panel">
+
+            <!-- tab switcher -->
+            <div class="card-tabs" role="tablist" aria-label="Login or Register">
+                <button class="card-tab active" id="tab-login" role="tab" aria-selected="true" aria-controls="face-login">
+                    Sign In
+                </button>
+                <button class="card-tab" id="tab-register" role="tab" aria-selected="false" aria-controls="face-register">
+                    Register
+                </button>
+                <div class="card-tab__indicator" aria-hidden="true"></div>
+            </div>
+
+            <!-- flip card -->
+            <div class="flip-card" id="flip-card">
+                <div class="flip-card__inner">
+
+                    <!-- FRONT: Login -->
+                    <div class="flip-card__face flip-card__face--front" id="face-login" role="tabpanel" aria-labelledby="tab-login">
+
+                        <div class="form-header">
+                            <h2>Welcome back</h2>
+                            <p>Sign in to your B Bright account</p>
+                        </div>
+
+                        <form class="auth-form" id="login-form" novalidate>
+
+                            <div class="field" id="field-email-login">
+                                <label for="login-email" class="field__label">Email address</label>
+                                <div class="field__wrap">
+                                    <i class="fa-regular fa-envelope field__icon" aria-hidden="true"></i>
+                                    <input
+                                        type="email"
+                                        id="login-email"
+                                        name="email"
+                                        class="field__input"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+                                </div>
+                                <span class="field__error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="field" id="field-pw-login">
+                                <label for="login-password" class="field__label">Password</label>
+                                <div class="field__wrap">
+                                    <i class="fa-solid fa-lock field__icon" aria-hidden="true"></i>
+                                    <input
+                                        type="password"
+                                        id="login-password"
+                                        name="password"
+                                        class="field__input"
+                                        placeholder="Your password"
+                                        autocomplete="current-password"
+                                        required
+                                    >
+                                    <button type="button" class="field__toggle" aria-label="Show password" data-target="login-password">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <span class="field__error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-row">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="remember"> Keep me signed in
+                                </label>
+                                <a href="forgot-password.html" class="form-link">Forgot password?</a>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="login-submit">
+                                <span class="btn-submit__text">Sign In</span>
+                                <span class="btn-submit__loader" aria-hidden="true"></span>
+                                <i class="fa-solid fa-arrow-right btn-submit__arrow" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="divider"><span>or continue with</span></div>
+
+                            <div class="social-btns">
+                                <button type="button" class="social-btn" aria-label="Sign in with Google">
+                                    <i class="fa-brands fa-google" aria-hidden="true"></i> Google
+                                </button>
+                                <button type="button" class="social-btn" aria-label="Sign in with GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!-- BACK: Register -->
+                    <div class="flip-card__face flip-card__face--back" id="face-register" role="tabpanel" aria-labelledby="tab-register">
+
+                        <div class="form-header">
+                            <h2>Create account</h2>
+                            <p>Start your B Bright journey today</p>
+                        </div>
+
+                        <form class="auth-form" id="register-form" novalidate>
+
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="reg-firstname" class="field__label">First name</label>
+                                    <div class="field__wrap">
+                                        <i class="fa-regular fa-user field__icon" aria-hidden="true"></i>
+                                        <input type="text" id="reg-firstname" name="firstname" class="field__input" placeholder="Ada" autocomplete="given-name" required>
+                                    </div>
+                                    <span class="field__error" aria-live="polite"></span>
+                                </div>
+                                <div class="field">
+                                    <label for="reg-lastname" class="field__label">Last name</label>
+                                    <div class="field__wrap">
+                                        <i class="fa-regular fa-user field__icon" aria-hidden="true"></i>
+                                        <input type="text" id="reg-lastname" name="lastname" class="field__input" placeholder="Lovelace" autocomplete="family-name" required>
+                                    </div>
+                                    <span class="field__error" aria-live="polite"></span>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="reg-email" class="field__label">Email address</label>
+                                <div class="field__wrap">
+                                    <i class="fa-regular fa-envelope field__icon" aria-hidden="true"></i>
+                                    <input type="email" id="reg-email" name="email" class="field__input" placeholder="you@example.com" autocomplete="email" required>
+                                </div>
+                                <span class="field__error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="field">
+                                <label for="reg-password" class="field__label">Password</label>
+                                <div class="field__wrap">
+                                    <i class="fa-solid fa-lock field__icon" aria-hidden="true"></i>
+                                    <input type="password" id="reg-password" name="password" class="field__input" placeholder="Min. 8 characters" autocomplete="new-password" required>
+                                    <button type="button" class="field__toggle" aria-label="Show password" data-target="reg-password">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <span class="field__error" aria-live="polite"></span>
+                                <!-- password strength bar -->
+                                <div class="pw-strength" id="pw-strength" aria-label="Password strength">
+                                    <div class="pw-strength__bar">
+                                        <div class="pw-strength__fill" id="pw-fill"></div>
+                                    </div>
+                                    <span class="pw-strength__label" id="pw-label"></span>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="checkbox-label checkbox-label--terms">
+                                    <input type="checkbox" name="terms" id="reg-terms" required>
+                                    I agree to the <a href="terms.html" class="form-link" target="_blank">Terms of Use</a> and <a href="privacy.html" class="form-link" target="_blank">Privacy Policy</a>
+                                </label>
+                                <span class="field__error" id="terms-error" aria-live="polite"></span>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="register-submit">
+                                <span class="btn-submit__text">Create Account</span>
+                                <span class="btn-submit__loader" aria-hidden="true"></span>
+                                <i class="fa-solid fa-arrow-right btn-submit__arrow" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="divider"><span>or continue with</span></div>
+
+                            <div class="social-btns">
+                                <button type="button" class="social-btn" aria-label="Register with Google">
+                                    <i class="fa-brands fa-google" aria-hidden="true"></i> Google
+                                </button>
+                                <button type="button" class="social-btn" aria-label="Register with GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- end flip card -->
+
+        </div>
+        <!-- end card panel -->
+
+    </main>
+
+    <script src="./scripts/login.js"></script>
+</body>
+</html>

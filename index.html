@@ -1102,6 +1102,21 @@
       </div>
     </footer>
 
+    <!-- ============================================================
+     SCROLL TO TOP BUTTON
+     ============================================================ -->
+
+<button class="scroll-top" id="scroll-top" aria-label="Scroll back to top" title="Back to top">
+    <span class="scroll-top__ring" aria-hidden="true"></span>
+    <svg class="scroll-top__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <svg class="scroll-top__progress" viewBox="0 0 42 42" aria-hidden="true">
+        <circle class="scroll-top__track" cx="21" cy="21" r="18"/>
+        <circle class="scroll-top__fill"  cx="21" cy="21" r="18" id="scroll-progress-ring"/>
+    </svg>
+</button>
+
     <!-- Script -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
@@ -1109,6 +1124,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- AOS Initialization -->
     <script>
       AOS.init({ once: true, offset: 60 });
     </script>
