@@ -226,3 +226,107 @@
     }
 
 })();
+
+/* ============================================================
+   PROGRAMMES SECTION — July of Tech countdown
+   ============================================================ */
+
+(function () {
+    'use strict';
+
+    const daysEl    = document.getElementById('cd-days');
+    const hoursEl   = document.getElementById('cd-hours');
+    const minsEl    = document.getElementById('cd-mins');
+    const secsEl    = document.getElementById('cd-secs');
+    const statusEl  = document.getElementById('july-status');
+    const liveBanner = document.getElementById('july-live-banner');
+
+    if (!daysEl) return; // section not on this page
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function setNum(el, val) {
+        const newVal = pad(val);
+        if (el.textContent !== newVal) {
+            el.classList.remove('flip');
+            void el.offsetWidth; // reflow to restart animation
+            el.classList.add('flip');
+            el.textContent = newVal;
+            setTimeout(function () { el.classList.remove('flip'); }, 200);
+        }
+    }
+
+    function tick() {
+        const now   = new Date();
+        const year  = now.getFullYear();
+        const month = now.getMonth(); // 0-indexed; 6 = July
+
+        // July 1 of the current or next year
+        let target = new Date(year, 6, 1, 0, 0, 0); // July 1, 00:00:00
+        const julyEnd = new Date(year, 6, 31, 23, 59, 59); // July 31
+
+        const isJulyNow = (month === 6);
+
+        if (isJulyNow) {
+            // It's July — show live banner, hide countdown
+            if (statusEl) {
+                statusEl.className = 'prog-card__badge prog-card__badge--live';
+                statusEl.textContent = '🔴 LIVE NOW';
+            }
+            if (liveBanner) liveBanner.hidden = false;
+
+            // Show time remaining in July
+            const diff = julyEnd - now;
+            if (diff <= 0) return;
+
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+
+            setNum(daysEl,  d);
+            setNum(hoursEl, h);
+            setNum(minsEl,  m);
+            setNum(secsEl,  s);
+
+        } else {
+            // Not July — countdown to next July 1
+            if (month > 6) {
+                target = new Date(year + 1, 6, 1, 0, 0, 0);
+            }
+
+            if (statusEl) {
+                statusEl.className = 'prog-card__badge prog-card__badge--upcoming';
+                const monthsLeft = (target.getFullYear() - now.getFullYear()) * 12 + (6 - now.getMonth());
+                statusEl.textContent = monthsLeft <= 1 ? 'Coming Soon' : 'July ' + target.getFullYear();
+            }
+
+            const diff = target - now;
+            if (diff <= 0) return;
+
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+
+            setNum(daysEl,  d);
+            setNum(hoursEl, h);
+            setNum(minsEl,  m);
+            setNum(secsEl,  s);
+        }
+    }
+
+    tick();
+    setInterval(tick, 1000);
+
+})();
+
+
+/* ============================================================
+   FOOTER — auto year
+   Append to bottom of scripts/index.js
+   ============================================================ */
+(function () {
+    const yr = document.getElementById('footer-year');
+    if (yr) yr.textContent = new Date().getFullYear();
+})();
