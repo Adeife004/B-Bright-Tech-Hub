@@ -465,6 +465,10 @@ body {
     width: 100%;
 }
 
+.mobile-cta-row {
+    display: none;
+}
+
 /* ============================================================
 
 /* ============================================================
@@ -795,7 +799,9 @@ body {
 
 @media (max-width: 900px) {
     .navbar {
-        grid-template-columns: auto 1fr auto auto;
+        /* grid-template-columns: auto 1fr auto auto; */
+        display: flex;
+        justify-content: space-between;
     }
  
     /* hide center links — menu is off-canvas by default */
@@ -842,7 +848,9 @@ body {
             visibility 0s linear 0s;
     }
  
-    .navbar__hamburger { display: flex; }
+    .navbar__hamburger { 
+        display: flex; 
+    }
  
     /* individual links inside mobile menu */
     .navbar__link {
@@ -911,7 +919,7 @@ body {
         gap: 0.75rem;
         padding: 1rem 1.5rem 0;
     }
- 
+    
     .mobile-cta-row .btn-login,
     .mobile-cta-row .btn-apply {
         flex: 1;
