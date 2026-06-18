@@ -19,18 +19,14 @@
 </head>
 <body>
 
-    <!-- back link -->
-    <a href="index.html" class="back-link">
-        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-        Back to site
+    <!-- home icon -->
+    <a href="index.html" class="home-icon" aria-label="Back to homepage" title="Back to homepage">
+        <i class="fa-solid fa-house" aria-hidden="true"></i>
     </a>
 
-    <!-- particle canvas -->
+    <!-- terminal-style animated code background -->
     <canvas id="login-canvas"></canvas>
-
-    <!-- background orbs -->
-    <div class="orb orb--a" aria-hidden="true"></div>
-    <div class="orb orb--b" aria-hidden="true"></div>
+    <div class="terminal-bg" id="terminal-bg" aria-hidden="true"></div>
 
     <!-- grid texture -->
     <div class="bg-grid" aria-hidden="true"></div>
@@ -40,8 +36,8 @@
         <!-- left panel — brand side -->
         <div class="brand-panel" aria-hidden="true">
             <div class="brand-panel__inner">
-                <div class="brand-panel__logo">
-                    <img src="asset/logo.webp" alt="B Bright Tech Hub">
+                <div class="brand-panel__wordmark">
+                    <span class="wordmark-type" id="wordmark-type" aria-label="B Bright Tech Hub"></span><span class="wordmark-cursor" aria-hidden="true">|</span>
                 </div>
                 <h1 class="brand-panel__headline">
                     Build the<br>

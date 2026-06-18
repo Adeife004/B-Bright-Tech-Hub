@@ -17,11 +17,11 @@
 </head>
 <body>
 
-    <a href="index.html" class="back-link">
-        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to site
+    <a href="index.html" class="home-icon" aria-label="Back to homepage" title="Back to homepage">
+        <i class="fa-solid fa-house" aria-hidden="true"></i>
     </a>
 
-    <!-- ============ AURORA MESH BACKGROUND ============ -->
+    <!-- ============ AURORA MESH + TERMINAL CODE BACKGROUND ============ -->
     <div class="aurora" aria-hidden="true">
         <div class="aurora__blob aurora__blob--1"></div>
         <div class="aurora__blob aurora__blob--2"></div>
@@ -30,12 +30,15 @@
         <div class="aurora__noise"></div>
         <div class="aurora__grid"></div>
     </div>
+    <div class="terminal-bg" id="terminal-bg" aria-hidden="true"></div>
 
     <main class="apply-wrap">
 
         <!-- ============ HEADER ============ -->
         <div class="apply-header" id="apply-header">
-            <img src="asset/logo.webp" alt="B Bright Tech Hub" class="apply-header__logo">
+            <div class="apply-header__wordmark">
+                <span class="wordmark-type" id="wordmark-type" aria-label="B Bright Tech Hub"></span><span class="wordmark-cursor" aria-hidden="true">|</span>
+            </div>
             <h1>Let's Start <span class="text-accent">Something</span></h1>
             <p>Whether you're here to learn or here to build — we want you on the team.</p>
         </div>

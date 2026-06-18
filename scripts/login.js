@@ -1,10 +1,12 @@
 /* =============================================================
    login.js — B Bright Tech Hub Login Page
    1. Background particle canvas
-   2. Tab switcher + 3D flip card
-   3. Password show/hide toggle
-   4. Password strength meter
-   5. Form validation
+   2. Terminal code-rain background
+   3. Wordmark typewriter
+   4. Tab switcher + 3D flip card
+   5. Password show/hide toggle
+   6. Password strength meter
+   7. Form validation
    ============================================================= */
 
 
@@ -90,7 +92,103 @@
 
 
 /* ===========================================================
-   2.  TAB SWITCHER + FLIP CARD
+   2.  TERMINAL CODE-RAIN BACKGROUND
+   =========================================================== */
+(function () {
+    'use strict';
+
+    const wrap = document.getElementById('terminal-bg');
+    if (!wrap) return;
+
+    const SNIPPETS = [
+        "const user = await auth.signIn(email);",
+        "function buildCareer(skills) {",
+        "  return skills.map(s => master(s));",
+        "}",
+        "class Student extends Learner {",
+        "  constructor(name) {",
+        "    super(name);",
+        "    this.progress = 0;",
+        "  }",
+        "}",
+        "import { BBright } from './hub';",
+        "export default function Apply() {",
+        "  const [step, setStep] = useState(1);",
+        "  return <Form step={step} />;",
+        "}",
+        "git commit -m 'launch career'",
+        "npm run build:future",
+        "SELECT * FROM students",
+        "WHERE status = 'thriving';",
+        "while (learning) { grow(); }",
+        "try {",
+        "  await applyToProgramme();",
+        "} catch (doubt) {",
+        "  ignore(doubt);",
+        "}",
+        "const success = true;",
+        "// 2,400+ graduates and counting",
+        "<Hub vision='bright' />",
+        "deploy(yourFuture);"
+    ];
+
+    function buildColumn() {
+        const col = document.createElement('div');
+        col.className = 'terminal-bg__col';
+
+        const lineCount = 18 + Math.floor(Math.random() * 10);
+        const lines = [];
+        for (let i = 0; i < lineCount; i++) {
+            lines.push(SNIPPETS[Math.floor(Math.random() * SNIPPETS.length)]);
+        }
+        col.textContent = lines.join('\n');
+
+        col.style.left = Math.random() * 100 + '%';
+        col.style.animationDuration = (28 + Math.random() * 22) + 's';
+        col.style.animationDelay = (-Math.random() * 30) + 's';
+
+        return col;
+    }
+
+    const COLUMN_COUNT = window.innerWidth < 700 ? 5 : 9;
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < COLUMN_COUNT; i++) {
+        frag.appendChild(buildColumn());
+    }
+    wrap.appendChild(frag);
+
+})();
+
+
+/* ===========================================================
+   3.  WORDMARK TYPEWRITER — "B Bright Tech Hub"
+   =========================================================== */
+(function () {
+    'use strict';
+
+    const el = document.getElementById('wordmark-type');
+    if (!el) return;
+
+    const FULL_TEXT = 'B Bright Tech Hub';
+    const TYPE_SPEED = 90;
+    let i = 0;
+
+    function typeNext() {
+        if (i <= FULL_TEXT.length) {
+            el.textContent = FULL_TEXT.slice(0, i);
+            i++;
+            setTimeout(typeNext, TYPE_SPEED);
+        }
+        /* stays fully typed — cursor keeps blinking via CSS */
+    }
+
+    setTimeout(typeNext, 400);
+
+})();
+
+
+/* ===========================================================
+   4.  TAB SWITCHER + FLIP CARD
    =========================================================== */
 (function () {
     'use strict';
@@ -131,7 +229,7 @@
 
 
 /* ===========================================================
-   3.  PASSWORD SHOW / HIDE TOGGLE
+   5.  PASSWORD SHOW / HIDE TOGGLE
    =========================================================== */
 (function () {
     'use strict';
@@ -159,7 +257,7 @@
 
 
 /* ===========================================================
-   4.  PASSWORD STRENGTH METER
+   6.  PASSWORD STRENGTH METER
    =========================================================== */
 (function () {
     'use strict';
@@ -209,7 +307,7 @@
 
 
 /* ===========================================================
-   5.  FORM VALIDATION
+   7.  FORM VALIDATION
    =========================================================== */
 (function () {
     'use strict';

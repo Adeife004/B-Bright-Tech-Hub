@@ -1,12 +1,113 @@
 /* =============================================================
    apply.js — B Bright Tech Hub Application Page (v2)
-   1. Path selector (student vs careers)
-   2. Multi-step navigation per panel
-   3. Per-step validation
-   4. Review summary builder
-   5. Submit handling
+   1. Terminal code-rain background
+   2. Wordmark typewriter
+   3. Path selector (student vs careers)
+   4. Multi-step navigation per panel
+   5. Per-step validation
+   6. Review summary builder
+   7. Submit handling
    ============================================================= */
 
+
+/* ===========================================================
+   1.  TERMINAL CODE-RAIN BACKGROUND
+   =========================================================== */
+(function () {
+    'use strict';
+
+    const wrap = document.getElementById('terminal-bg');
+    if (!wrap) return;
+
+    const SNIPPETS = [
+        "const user = await auth.signIn(email);",
+        "function buildCareer(skills) {",
+        "  return skills.map(s => master(s));",
+        "}",
+        "class Applicant extends Hopeful {",
+        "  constructor(name) {",
+        "    super(name);",
+        "    this.status = 'pending';",
+        "  }",
+        "}",
+        "import { BBright } from './hub';",
+        "export default function Apply() {",
+        "  const [step, setStep] = useState(1);",
+        "  return <Form step={step} />;",
+        "}",
+        "git commit -m 'submit application'",
+        "npm run build:future",
+        "SELECT * FROM applicants",
+        "WHERE status = 'accepted';",
+        "while (learning) { grow(); }",
+        "try {",
+        "  await submitApplication();",
+        "} catch (doubt) {",
+        "  ignore(doubt);",
+        "}",
+        "const success = true;",
+        "// 2,400+ graduates and counting",
+        "<Hub vision='bright' />",
+        "deploy(yourFuture);"
+    ];
+
+    function buildColumn() {
+        const col = document.createElement('div');
+        col.className = 'terminal-bg__col';
+
+        const lineCount = 18 + Math.floor(Math.random() * 10);
+        const lines = [];
+        for (let i = 0; i < lineCount; i++) {
+            lines.push(SNIPPETS[Math.floor(Math.random() * SNIPPETS.length)]);
+        }
+        col.textContent = lines.join('\n');
+
+        col.style.left = Math.random() * 100 + '%';
+        col.style.animationDuration = (28 + Math.random() * 22) + 's';
+        col.style.animationDelay = (-Math.random() * 30) + 's';
+
+        return col;
+    }
+
+    const COLUMN_COUNT = window.innerWidth < 700 ? 5 : 9;
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < COLUMN_COUNT; i++) {
+        frag.appendChild(buildColumn());
+    }
+    wrap.appendChild(frag);
+
+})();
+
+
+/* ===========================================================
+   2.  WORDMARK TYPEWRITER — "B Bright Tech Hub"
+   =========================================================== */
+(function () {
+    'use strict';
+
+    const el = document.getElementById('wordmark-type');
+    if (!el) return;
+
+    const FULL_TEXT = 'B Bright Tech Hub';
+    const TYPE_SPEED = 90;
+    let i = 0;
+
+    function typeNext() {
+        if (i <= FULL_TEXT.length) {
+            el.textContent = FULL_TEXT.slice(0, i);
+            i++;
+            setTimeout(typeNext, TYPE_SPEED);
+        }
+    }
+
+    setTimeout(typeNext, 400);
+
+})();
+
+
+/* ===========================================================
+   3.  PATH SELECTOR + MULTI-STEP FORMS
+   =========================================================== */
 (function () {
     'use strict';
 
