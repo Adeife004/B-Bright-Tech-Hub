@@ -171,6 +171,60 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   applyScrollState(); /* run once on load */
 
+  /* ============================================================
+   SERVICES MEGA-MENU TOGGLE
+   ============================================================ */
+(function () {
+    'use strict';
+
+    const servicesDropdown = document.getElementById('services-dropdown');
+    const servicesToggle   = servicesDropdown && servicesDropdown.querySelector('.navbar__dropdown-toggle');
+
+    if (!servicesDropdown || !servicesToggle) return;
+
+    servicesToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = servicesDropdown.classList.toggle('open');
+        servicesToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    /* close on outside click */
+    document.addEventListener('click', function (e) {
+        if (!servicesDropdown.contains(e.target)) {
+            servicesDropdown.classList.remove('open');
+            servicesToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    /* close on Escape */
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && servicesDropdown.classList.contains('open')) {
+            servicesDropdown.classList.remove('open');
+            servicesToggle.setAttribute('aria-expanded', 'false');
+            servicesToggle.focus();
+        }
+    });
+
+    /* close mobile menu when any link inside the mega-menu is tapped */
+    servicesDropdown.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            servicesDropdown.classList.remove('open');
+            servicesToggle.setAttribute('aria-expanded', 'false');
+
+            /* also close the parent mobile nav if open */
+            const navMenu   = document.getElementById('nav-menu');
+            const hamburger = document.getElementById('hamburger');
+            if (navMenu && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                hamburger && hamburger.classList.remove('open');
+                hamburger && hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+})();
+
   /* ===========================================================
        2.  HERO CANVAS  —  floating particle network
        =========================================================== */
