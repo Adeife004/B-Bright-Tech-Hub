@@ -269,12 +269,12 @@
 
   if (typeEl) {
     const phrases = [
-      "the Home of Technology.",
-      "where Careers are Built.",
-      "the Future of Learning.",
-      "where Coders are Born.",
-      "the Place to Excel.",
-      "your Next Chapter.",
+      "The Home of Technology.",
+      "Where Careers are Built.",
+      "The Future of Learning.",
+      "Where Coders are Born.",
+      "The Place to Excel.",
+      "Your Next Chapter.",
     ];
 
     let phraseIndex = 0;
