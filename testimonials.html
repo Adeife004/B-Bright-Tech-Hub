@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet" />
+
+    <title>Testimonials</title>
+    <!-- fav-icon -->
+    <link rel="icon" type="image/webp" href="asset/logo.webp" />
+
+    <!-- Font Awesome 6 (free CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- testimonial css -->
+    <link rel="stylesheet" href="./styles/testimonial.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <!-- LEFT: Logo -->
+            <div class="navbar__logo">
+                <a href="#" aria-label="B Bright Tech Hub Home">
+                    <img src="asset/logo.png" alt="B Bright Tech Hub Logo" />
+                </a>
+            </div>
+
+            <!-- CENTER: Nav links -->
+            <ul class="navbar__links" id="nav-menu">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
+                <li class="navbar__dropdown navbar__dropdown--mega" id="services-dropdown">
+                    <button class="navbar__link navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Services
+                        <svg class="navbar__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-menu__grid">
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Tech Skills Training
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#digital-literacy" role="menuitem">Digital Literacy</a>
+                                    </li>
+                                    <li><a href="services.html#web-development" role="menuitem">Web Development</a></li>
+                                    <li><a href="services.html#ui-ux-design" role="menuitem">UI/UX Design</a></li>
+                                    <li><a href="services.html#data-analysis" role="menuitem">Data Analysis</a></li>
+                                    <li><a href="services.html#vibe-coding" role="menuitem">
+                                            Vibe Coding <span class="mega-menu__tag">New</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-robot" aria-hidden="true"></i> Emerging Technologies
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#robotics" role="menuitem">Robotics</a></li>
+                                    <li><a href="services.html#vr-ar" role="menuitem">VR &amp; AR</a></li>
+                                    <li><a href="services.html#game-development" role="menuitem">Game Development</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-cube" aria-hidden="true"></i> Creative Media
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#3d-modelling" role="menuitem">3D Modelling</a></li>
+                                    <li><a href="services.html#2d-animation" role="menuitem">2D Animation</a></li>
+                                </ul>
+
+                                <h3 class="mega-menu__col-title mega-menu__col-title--spaced">
+                                    <i class="fa-solid fa-calendar-week" aria-hidden="true"></i> Learning Programs
+                                </h3>
+                                <ul>
+                                    <li><a href="after-school.html" role="menuitem">After-School Classes</a></li>
+                                    <li><a href="services.html#weekend-classes" role="menuitem">Weekend Classes</a></li>
+                                    <li><a href="services.html#holiday-classes" role="menuitem">Holiday Classes</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-school" aria-hidden="true"></i> School Solutions
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#in-school-coding" role="menuitem">In-School Coding
+                                            Programs</a></li>
+                                    <li><a href="services.html#in-school-robotics" role="menuitem">In-School Robotics
+                                            Programs</a></li>
+                                    <li><a href="services.html#teacher-training" role="menuitem">Teacher Training</a>
+                                    </li>
+                                    <li><a href="services.html#educational-consultation" role="menuitem">Educational
+                                            Consultation</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- mega menu footer strip -->
+                        <div class="mega-menu__footer">
+                            <div class="mega-menu__footer-text">
+                                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                Not sure where to start? We'll help you find the right fit.
+                            </div>
+                            <a href="contact.html" class="mega-menu__footer-link">
+                                Talk to us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__dropdown" id="pages-dropdown">
+                    <button class="navbar__link navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                        <svg class="navbar__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <ul class="navbar__dropdown-menu" role="menu">
+                        <li role="none">
+                            <a href="testimonials.html" class="navbar__dropdown-item" role="menuitem">
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                                Testimonials
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="programmes.html" class="navbar__dropdown-item" role="menuitem">
+                                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                                Programmes
+                            </a>
+                        </li>
+
+                    </ul>
+                <li class="mobile-cta-row" aria-hidden="false">
+                    <a href="login.html" class="btn-login">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i> Login
+                    </a>
+                    <a href="apply.html" class="btn-apply">
+                        Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+                </li>
+            </ul>
+
+            <!-- RIGHT: CTA buttons -->
+            <div class="navbar__actions">
+                <a href="login.html" class="btn-login">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    Login
+                </a>
+                <a href="apply.html" class="btn-apply">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <!-- Hamburger (mobile only) -->
+            <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="ham-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+        </nav>
+    </header>
+    <!-- Hero -->
+    <main class="hero">
+        <!-- animated background canvas -->
+        <canvas id="hero-canvas"></canvas>
+
+        <!-- floating glow orbs -->
+        <div class="orb orb--1" aria-hidden="true"></div>
+        <div class="orb orb--2" aria-hidden="true"></div>
+        <div class="orb orb--3" aria-hidden="true"></div>
+
+        <div class="hero__content">
+            <span class="section-eyebrow">
+                <span class="eyebrow-line" aria-hidden="true"></span>
+                Testimonials
+                <span class="eyebrow-line" aria-hidden="true"></span>
+            </span>
+
+            <!-- typewriter headline -->
+            <h1 class="hero__heading" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+                <span class="testimonial hero__heading-static">Trusted by</span> <span
+                    class="hero__heading-brand">Learners<span class="brand-dot">.</span></span>
+            </h1>
+
+            <h1 class="hero__heading" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+                <span class="testimonial hero__heading-static">Proven by</span> <span
+                    class="hero__heading-brand">Results<span class="brand-dot">.</span></span>
+            </h1>
+
+
+            <p class="hero__sub" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                See how B Bright Tech Hub is helping learners build real skills, land opportunities, and shape better
+                futures through tech education.
+            </p>
+
+
+        </div>
+    </main>
+
+    <!-- === Testimonies ==== -->
+    <section class="testimonials-section">
+        <div class="testimonial-slide">
+
+            <!-- Card 1 -->
+            <div class="testimonial-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p class="testimonial-text">
+                    B Bright Tech Hub gave me the skills and confidence I needed
+                    to land my first job as a frontend developer. The projects
+                    were real, the mentorship was better.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="./asset/contactbg.png" alt="Jasmine">
+
+                    <div class="user-info">
+                        <h4>Jasmine A.</h4>
+                        <span>Frontend Developer</span>
+                        <!-- 5/4 stars icons  -->
+                        <div class="rating">
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card active">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p class="testimonial-text">
+                    The AI & Data Science programme transformed the way I think
+                    about data. The hands-on approach, capstone projects, and
+                    community support made all the difference.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="./asset/contactbg.png" alt="Rahma">
+
+                    <div class="user-info">
+                        <h4>Rahma O.</h4>
+                        <span>Data Analyst</span>
+                        <!-- 5/4 stars icons  -->
+                        <div class="rating">
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="testimonial-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p class="testimonial-text">
+                    From zero to job-ready in months. The Cybersecurity training
+                    was practical, up-to-date, and opened doors I never thought
+                    possible.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="./asset/contactbg.png" alt="Emmanuel">
+
+                    <div class="user-info">
+                        <h4>Emmanuel U.</h4>
+                        <span>Security Analyst</span>
+                        <!-- 5/4 stars icons  -->
+                        <div class="rating">
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                            <i class="fa-solid fa-star" style="color: rgb(31, 111, 120);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="testimonial-cta">
+        <div class="cta-content">
+
+            <div class="cta-left">
+                <div class="cta-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <div>
+                    <h2>
+                        Join Thousands of
+                        <span>Successful Learners</span>
+                    </h2>
+
+                    <p>
+                        Start your journey today and become the next
+                        B Bright Tech success story.
+                    </p>
+                </div>
+            </div>
+          <a href="apply.html" class="cta-btn">
+            Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+        </div>
+    </section>
+    <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__inner">
+            <!-- brand column -->
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo-link" aria-label="B Bright Tech Hub home">
+                    <img src="asset/logo.png" alt="B Bright Tech Hub" />
+                </a>
+                <p class="footer__tagline">
+                    The place where tech careers are built. Come learn, build, and grow
+                    with us.
+                </p>
+                <div class="footer__socials" aria-label="Social media links">
+                    <a href="#" class="footer__social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="footer__social" aria-label="X / Twitter" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="footer__social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="footer__social" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- quick links -->
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="programmes.html">Programmes</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Programmes</h3>
+                    <ul>
+                        <li><a href="july-of-tech.html">July of Tech</a></li>
+                        <li><a href="summer-classes.html">Summer Classes</a></li>
+                        <li><a href="after-school.html">After School</a></li>
+                        <li><a href="programmes.html">All Programmes</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact</h3>
+                    <ul class="footer__contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>123 Tech Avenue, Lagos, Nigeria</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+2340000000000">+234 000 000 0000</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:hello@bbrighttechhub.com">hello@bbrighttechhub.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- bottom bar -->
+        <div class="footer__bottom">
+            <p>
+                &copy; <span id="footer-year"></span> B Bright Tech Hub. All rights
+                reserved.
+            </p>
+            <div class="footer__legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <span aria-hidden="true">·</span>
+                <a href="terms.html">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================================
+     SCROLL TO TOP BUTTON
+     ============================================================ -->
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll back to top" title="Back to top">
+        <span class="scroll-top__ring" aria-hidden="true"></span>
+        <svg class="scroll-top__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+        <svg class="scroll-top__progress" viewBox="0 0 42 42" aria-hidden="true">
+            <circle class="scroll-top__track" cx="21" cy="21" r="18" />
+            <circle class="scroll-top__fill" cx="21" cy="21" r="18" id="scroll-progress-ring" />
+        </svg>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0afc/yuadhlzz0nK6YRC/MVaLFZVZosyIQ/gYt5phA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init({ once: true, offset: 60 });
+    </script>
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>
