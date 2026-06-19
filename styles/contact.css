@@ -130,8 +130,12 @@ body {
   background-color: var(--accent);
   border-radius: 10px;
   margin-right: 20px;
-
-  /* transition */
+transition: 0.3s ease;
+}
+.hero-apply-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(253, 222, 82, 0.55), 0 0 0 6px rgba(55,143,132,0.12);
+    filter: brightness(1.1);
 }
 
 .hero-contact-btn {
@@ -148,6 +152,8 @@ body {
   background-color: var(--light);
   color: var(--dark);
     transform:translateY(-3px);
+        box-shadow: 0 10px 32px rgba(203, 245, 240, 0.55), 0 0 0 6px rgba(55,143,132,0.12);
+    filter: brightness(1.1);
 }
 .hero-contact-btn:hover i{
   color: var(--dark);
@@ -159,7 +165,7 @@ body {
     flex:1;
     display:flex;
     justify-content:center;
-    align-items:flex-end;
+    align-items:center;
 }
 
 .hero-image img{
@@ -167,7 +173,6 @@ body {
     max-width:520px;
     height:auto;
     display:block;
-    object-fit:contain;
 }
 
 /* orange corner */
@@ -429,10 +434,6 @@ body {
   .contact-text h1 {
     font-size: 3rem;
   }
-
-  .hero-image {
-    min-height: 320px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -440,7 +441,7 @@ body {
     flex-direction: column;
     text-align: center;
     min-height: auto;
-    padding: 3rem 1.25rem;
+    padding: 3rem 1.25rem 0 3rem;
   }
 
   .contact-text {
@@ -459,10 +460,11 @@ body {
   margin-top: 1.5rem;
 }
 
-  .hero-image {
-    width: 100%;
-    min-height: 280px;
-  }
+ .hero-brand img{
+    width:160px;
+    display:block;
+    margin:0 auto 30px;
+}
 
   .orange-corner {
     width: 150px;
