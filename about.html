@@ -1,15 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Exo Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>About</title>
-</head>
-<body>
-    <h1>This is Rahmah's project init clock itttt😉😉</h1>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-</body>
+    <!-- fav-icon -->
+    <link rel="icon" type="image/webp" href="asset/logo.webp" />
+
+    <!-- Font Awesome 6 (free CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- About CSS -->
+    <link rel="stylesheet" href="./styles/about.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <!-- LEFT: Logo -->
+        <div class="navbar__logo">
+          <a href="#" aria-label="B Bright Tech Hub Home">
+            <img src="asset/logo.webp" alt="B Bright Tech Hub Logo" />
+          </a>
+        </div>
+
+        <!-- CENTER: Nav links -->
+        <ul class="navbar__links" id="nav-menu">
+          <li><a href="index.html" class="navbar__link">Home</a></li>
+          <li><a href="about.html" class="navbar__link">About</a></li>
+          <li><a href="services.html" class="navbar__link">Services</a></li>
+          <li><a href="contact.html" class="navbar__link">Contact</a></li>
+          <li class="navbar__dropdown" id="pages-dropdown">
+            <button
+              class="navbar__link navbar__dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Pages
+              <svg
+                class="navbar__chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="navbar__dropdown-menu" role="menu">
+              <li role="none">
+                <a
+                  href="testimonials.html"
+                  class="navbar__dropdown-item"
+                  role="menuitem"
+                >
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  Testimonials
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  href="programmes.html"
+                  class="navbar__dropdown-item"
+                  role="menuitem"
+                >
+                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                  Programmes
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- RIGHT: CTA buttons -->
+        <div class="navbar__actions">
+          <a href="login.html" class="btn-login">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            Login
+          </a>
+          <a href="apply.html" class="btn-apply">
+            Apply Now
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Hamburger (mobile only) -->
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="text">
+        <h1>Bright Ideas Begin at B Bright Tech Hub</h1>
+        <p>
+          Explore cutting-edge technology courses and gain hands-on experience
+          <br />
+          to build the career you've always envisioned.
+        </p>
+        <p>Learn. Build. Innovate. Succeed.</p>
+      </div>
+    </section>
+    <!-- about Bbright Tech Hub -->
+    <div class="about-container">
+      <!-- About text -->
+      <div class="about-text">
+        <h1>About B Bright Tech</h1>
+        <p>
+          Bright Tech is an educational technology company dedicated to
+          preparing learners for the digital future. We believe that introducing
+          computer science, coding, and computational thinking at an early age
+          helps develop critical skills such as problem-solving, logical
+          reasoning, creativity, and innovation. Through engaging, hands-on
+          learning experiences, we empower students with the knowledge and
+          confidence to thrive in a technology-driven world. At Bright Tech, we
+          are committed to building the next generation of creators, innovators,
+          and future tech leaders.
+        </p>
+      </div>
+      <!-- About Imagee -->
+      <div class="about-image">
+        <img src="asset/about-image.png" alt="" />
+      </div>
+    </div>
+    <!-- Vision and Mission -->
+    <div class="about-card">
+      <h1>OUR FOUNDATION: MISSION & VISION</h1>
+      <div class="about-foundation">
+        <div class="about-mission">
+          <h1>MISSION</h1>
+          <p>
+            ​At B Bright Tech Hub, our mission is to ignite curiosity, inspire
+            innovation, and empower young minds through a holistic and hands-on
+            approach to STEM education.
+          </p>
+        </div>
+        <div class="about-vision">
+          <h1>VISION</h1>
+          <p>
+            ​We envision a future where every child has the opportunity to
+            explore, innovate, and excel in the fields of science, technology,
+            engineering, and mathematics (STEM).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about-team">
+      <div class="about-team-text">
+      <h1>The Team Powering Innovation</h1>
+      <p>
+        Passionate educators and technology professionals committed to shaping
+        future innovators.
+      </p>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0afc/yuadhlzz0nK6YRC/MVaLFZVZosyIQ/gYt5phA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      AOS.init({ once: true, offset: 60 });
+    </script>
+    <script src="/scripts/index.js"></script>
+  </body>
 </html>
