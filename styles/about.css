@@ -77,7 +77,7 @@
   text-align: center;
 }
 .about-foundation {
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1.5rem 5rem;
@@ -109,4 +109,54 @@
   border-top: 5px solid #378f84;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+.about-team{
+  padding: 100px 8%;
+  background: #f9fbf9;
+}
+.about-team-text {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.about-team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 35px 12px;
+}
+.about-team-image {
+background: white;
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  border-top: 5px solid #378f84;
+}
+.about-team-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #378f84;
+  margin-bottom: 20px;
+}
+.about-team-image:hover{
+  transform: translateY(-10px);
+   box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+.team-text{
+  color: #5f737d;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.team-text p{
+   color: #666;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+.team-text h3{
+  color: #0f172a;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
 }
