@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply to B Bright Tech Hub — as a student or for a career with us.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="icon" type="image/webp" href="asset/logo.webp">
+    <title>Apply — B Bright Tech Hub</title>
+    <link rel="stylesheet" href="./styles/apply.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to site
+    </a>
+
+    <!-- ============ AURORA MESH BACKGROUND ============ -->
+    <div class="aurora" aria-hidden="true">
+        <div class="aurora__blob aurora__blob--1"></div>
+        <div class="aurora__blob aurora__blob--2"></div>
+        <div class="aurora__blob aurora__blob--3"></div>
+        <div class="aurora__blob aurora__blob--4"></div>
+        <div class="aurora__noise"></div>
+        <div class="aurora__grid"></div>
+    </div>
+
+    <main class="apply-wrap">
+
+        <!-- ============ HEADER ============ -->
+        <div class="apply-header" id="apply-header">
+            <img src="asset/logo.webp" alt="B Bright Tech Hub" class="apply-header__logo">
+            <h1>Let's Start <span class="text-accent">Something</span></h1>
+            <p>Whether you're here to learn or here to build — we want you on the team.</p>
+        </div>
+
+
+        <!-- ============ PATH SELECTOR (Step 0) ============ -->
+        <div class="path-select" id="path-select">
+
+            <button type="button" class="path-card path-card--learn" id="path-learn">
+                <span class="path-card__glow" aria-hidden="true"></span>
+                <span class="path-card__icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                <span class="path-card__title">I want to learn</span>
+                <span class="path-card__desc">Join a programme. Web dev, AI, design, security — pick your path and start building.</span>
+                <span class="path-card__cta">Apply as a student <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            </button>
+
+            <div class="path-divider" aria-hidden="true">
+                <span>or</span>
+            </div>
+
+            <button type="button" class="path-card path-card--work" id="path-work">
+                <span class="path-card__glow" aria-hidden="true"></span>
+                <span class="path-card__icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+                <span class="path-card__title">I want to work here</span>
+                <span class="path-card__desc">Join our team. Instructors, mentors, ops, and more — help us build the next cohort.</span>
+                <span class="path-card__cta">Apply for a role <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            </button>
+
+        </div>
+
+
+        <!-- ============ STUDENT FORM ============ -->
+        <section class="path-panel" id="panel-learn" hidden>
+
+            <button type="button" class="panel-back" data-back>
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Choose a different path
+            </button>
+
+            <div class="progress" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+                <div class="progress__steps">
+                    <div class="progress__step active" data-step="1">
+                        <span class="progress__circle"><i class="fa-solid fa-user" aria-hidden="true"></i></span>
+                        <span class="progress__label">About You</span>
+                    </div>
+                    <div class="progress__line"></div>
+                    <div class="progress__step" data-step="2">
+                        <span class="progress__circle"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                        <span class="progress__label">Programme</span>
+                    </div>
+                    <div class="progress__line"></div>
+                    <div class="progress__step" data-step="3">
+                        <span class="progress__circle"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+                        <span class="progress__label">Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="apply-card" id="form-learn" novalidate>
+
+                <fieldset class="step active" data-step="1">
+                    <legend class="step__title">Tell us about you</legend>
+                    <p class="step__sub">We'll use this to set up your application.</p>
+
+                    <div class="field-row">
+                        <div class="field" id="l-f-firstname">
+                            <label for="l-firstname" class="field__label">First name</label>
+                            <div class="field__wrap">
+                                <i class="fa-regular fa-user field__icon" aria-hidden="true"></i>
+                                <input type="text" id="l-firstname" name="firstname" class="field__input" placeholder="Ada" required>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                        <div class="field" id="l-f-lastname">
+                            <label for="l-lastname" class="field__label">Last name</label>
+                            <div class="field__wrap">
+                                <i class="fa-regular fa-user field__icon" aria-hidden="true"></i>
+                                <input type="text" id="l-lastname" name="lastname" class="field__input" placeholder="Lovelace" required>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                    </div>
+
+                    <div class="field" id="l-f-email">
+                        <label for="l-email" class="field__label">Email address</label>
+                        <div class="field__wrap">
+                            <i class="fa-regular fa-envelope field__icon" aria-hidden="true"></i>
+                            <input type="email" id="l-email" name="email" class="field__input" placeholder="you@example.com" required>
+                        </div>
+                        <span class="field__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field" id="l-f-phone">
+                            <label for="l-phone" class="field__label">Phone number</label>
+                            <div class="field__wrap">
+                                <i class="fa-solid fa-phone field__icon" aria-hidden="true"></i>
+                                <input type="tel" id="l-phone" name="phone" class="field__input" placeholder="+234 800 000 0000" required>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                        <div class="field" id="l-f-age">
+                            <label for="l-age" class="field__label">Age range</label>
+                            <div class="field__wrap field__wrap--select">
+                                <i class="fa-regular fa-calendar field__icon" aria-hidden="true"></i>
+                                <select id="l-age" name="age" class="field__input" required>
+                                    <option value="" disabled selected>Select range</option>
+                                    <option value="under-16">Under 16</option>
+                                    <option value="16-18">16 – 18</option>
+                                    <option value="19-24">19 – 24</option>
+                                    <option value="25-34">25 – 34</option>
+                                    <option value="35+">35+</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down field__chevron" aria-hidden="true"></i>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="step" data-step="2">
+                    <legend class="step__title">Choose your programme</legend>
+                    <p class="step__sub">Pick the track that excites you most.</p>
+
+                    <div class="option-grid" role="radiogroup" aria-label="Programme">
+                        <label class="option-card">
+                            <input type="radio" name="programme" value="web-development" required>
+                            <span class="option-card__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Web Development</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="programme" value="ai-data-science">
+                            <span class="option-card__icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+                            <span class="option-card__title">AI &amp; Data Science</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="programme" value="cybersecurity">
+                            <span class="option-card__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Cybersecurity</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="programme" value="mobile-development">
+                            <span class="option-card__icon"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Mobile Dev</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="programme" value="cloud-devops">
+                            <span class="option-card__icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Cloud &amp; DevOps</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="programme" value="not-sure">
+                            <span class="option-card__icon"><i class="fa-solid fa-circle-question" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Not Sure Yet</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                    </div>
+                    <span class="field__error" id="l-err-programme" aria-live="polite"></span>
+
+                    <div class="field-row" style="margin-top: 1.2rem;">
+                        <div class="field" id="l-f-track">
+                            <label for="l-track" class="field__label">Preferred track</label>
+                            <div class="field__wrap field__wrap--select">
+                                <i class="fa-regular fa-calendar-check field__icon" aria-hidden="true"></i>
+                                <select id="l-track" name="track" class="field__input" required>
+                                    <option value="" disabled selected>Select a track</option>
+                                    <option value="july-of-tech">July of Tech</option>
+                                    <option value="summer-classes">Summer Classes</option>
+                                    <option value="after-school">After School</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down field__chevron" aria-hidden="true"></i>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="step" data-step="3">
+                    <legend class="step__title">Review &amp; submit</legend>
+                    <p class="step__sub">Double-check everything before sending.</p>
+                    <div class="review-list" id="l-review-list"></div>
+                    <label class="checkbox-label checkbox-label--terms">
+                        <input type="checkbox" name="terms" id="l-terms" required>
+                        I agree to the <a href="terms.html" class="form-link" target="_blank">Terms of Use</a> and <a href="privacy.html" class="form-link" target="_blank">Privacy Policy</a>
+                    </label>
+                    <span class="field__error" id="l-err-terms" aria-live="polite"></span>
+                </fieldset>
+
+                <div class="step-nav">
+                    <button type="button" class="btn-back" data-prev disabled><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                    <button type="button" class="btn-next" data-next>Continue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    <button type="submit" class="btn-submit-final" data-submit hidden>
+                        <span class="btn-submit-final__text">Submit Application</span>
+                        <span class="btn-submit-final__loader" aria-hidden="true"></span>
+                        <i class="fa-solid fa-paper-plane btn-submit-final__icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+
+        <!-- ============ CAREERS FORM ============ -->
+        <section class="path-panel" id="panel-work" hidden>
+
+            <button type="button" class="panel-back" data-back>
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Choose a different path
+            </button>
+
+            <div class="progress" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+                <div class="progress__steps">
+                    <div class="progress__step active" data-step="1">
+                        <span class="progress__circle"><i class="fa-solid fa-user" aria-hidden="true"></i></span>
+                        <span class="progress__label">About You</span>
+                    </div>
+                    <div class="progress__line"></div>
+                    <div class="progress__step" data-step="2">
+                        <span class="progress__circle"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+                        <span class="progress__label">Role</span>
+                    </div>
+                    <div class="progress__line"></div>
+                    <div class="progress__step" data-step="3">
+                        <span class="progress__circle"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+                        <span class="progress__label">Review</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="apply-card" id="form-work" novalidate>
+
+                <fieldset class="step active" data-step="1">
+                    <legend class="step__title">Tell us about you</legend>
+                    <p class="step__sub">Basic contact info to get started.</p>
+
+                    <div class="field-row">
+                        <div class="field" id="w-f-firstname">
+                            <label for="w-firstname" class="field__label">First name</label>
+                            <div class="field__wrap">
+                                <i class="fa-regular fa-user field__icon" aria-hidden="true"></i>
+                                <input type="text" id="w-firstname" name="firstname" class="field__input" placeholder="Chidi" required>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                        <div class="field" id="w-f-lastname">
+                            <label for="w-lastname" class="field__label">Last name</label>
+                            <div class="field__wrap">
+                                <i class="fa-regular fa-user field__icon" aria-hidden="true"></i>
+                                <input type="text" id="w-lastname" name="lastname" class="field__input" placeholder="Okafor" required>
+                            </div>
+                            <span class="field__error" aria-live="polite"></span>
+                        </div>
+                    </div>
+
+                    <div class="field" id="w-f-email">
+                        <label for="w-email" class="field__label">Email address</label>
+                        <div class="field__wrap">
+                            <i class="fa-regular fa-envelope field__icon" aria-hidden="true"></i>
+                            <input type="email" id="w-email" name="email" class="field__input" placeholder="you@example.com" required>
+                        </div>
+                        <span class="field__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="field" id="w-f-phone">
+                        <label for="w-phone" class="field__label">Phone number</label>
+                        <div class="field__wrap">
+                            <i class="fa-solid fa-phone field__icon" aria-hidden="true"></i>
+                            <input type="tel" id="w-phone" name="phone" class="field__input" placeholder="+234 800 000 0000" required>
+                        </div>
+                        <span class="field__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="field" id="w-f-linkedin">
+                        <label for="w-linkedin" class="field__label">LinkedIn or portfolio (optional)</label>
+                        <div class="field__wrap">
+                            <i class="fa-brands fa-linkedin field__icon" aria-hidden="true"></i>
+                            <input type="url" id="w-linkedin" name="linkedin" class="field__input" placeholder="https://linkedin.com/in/...">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="step" data-step="2">
+                    <legend class="step__title">Which role?</legend>
+                    <p class="step__sub">Pick the team you'd like to join.</p>
+
+                    <div class="option-grid" role="radiogroup" aria-label="Role">
+                        <label class="option-card">
+                            <input type="radio" name="role" value="instructor" required>
+                            <span class="option-card__icon"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Instructor</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="role" value="mentor">
+                            <span class="option-card__icon"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Mentor</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="role" value="curriculum">
+                            <span class="option-card__icon"><i class="fa-solid fa-book" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Curriculum</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="role" value="operations">
+                            <span class="option-card__icon"><i class="fa-solid fa-gears" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Operations</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="role" value="marketing">
+                            <span class="option-card__icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Marketing</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="role" value="other">
+                            <span class="option-card__icon"><i class="fa-solid fa-ellipsis" aria-hidden="true"></i></span>
+                            <span class="option-card__title">Other</span>
+                            <span class="option-card__check"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+                        </label>
+                    </div>
+                    <span class="field__error" id="w-err-role" aria-live="polite"></span>
+
+                    <div class="field" id="w-f-why" style="margin-top: 1.2rem;">
+                        <label for="w-why" class="field__label">Why B Bright? (optional)</label>
+                        <div class="field__wrap field__wrap--textarea">
+                            <textarea id="w-why" name="why" class="field__input" rows="3" placeholder="Tell us a little about your experience and why you'd be a great fit."></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="step" data-step="3">
+                    <legend class="step__title">Review &amp; submit</legend>
+                    <p class="step__sub">Double-check everything before sending.</p>
+                    <div class="review-list" id="w-review-list"></div>
+                    <label class="checkbox-label checkbox-label--terms">
+                        <input type="checkbox" name="terms" id="w-terms" required>
+                        I agree to the <a href="terms.html" class="form-link" target="_blank">Terms of Use</a> and <a href="privacy.html" class="form-link" target="_blank">Privacy Policy</a>
+                    </label>
+                    <span class="field__error" id="w-err-terms" aria-live="polite"></span>
+                </fieldset>
+
+                <div class="step-nav">
+                    <button type="button" class="btn-back" data-prev disabled><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                    <button type="button" class="btn-next" data-next>Continue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    <button type="submit" class="btn-submit-final" data-submit hidden>
+                        <span class="btn-submit-final__text">Submit Application</span>
+                        <span class="btn-submit-final__loader" aria-hidden="true"></span>
+                        <i class="fa-solid fa-paper-plane btn-submit-final__icon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+
+        <!-- ============ SUCCESS STATE ============ -->
+        <div class="success-card" id="success-card" hidden>
+            <div class="success-card__icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+            <h2 id="success-title">Application Sent!</h2>
+            <p id="success-text">Thanks for applying. We'll be in touch within 48 hours.</p>
+            <a href="index.html" class="btn-apply-cta">Back to Home <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+    </main>
+
+    <script src="./scripts/apply.js"></script>
+</body>
+</html>
