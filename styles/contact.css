@@ -15,7 +15,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* html */
+html {
+  scroll-behavior: smooth;
+}
+/* body */
 body {
   font-family: var(--font-family);
   background-color: var(--light);
@@ -427,34 +431,48 @@ transition: 0.3s ease;
 
 @media (max-width: 1024px) {
   .contact-hero {
-    padding: 4rem 2rem;
-    gap: 2rem;
+    padding: 4rem 0 0 2rem;
+    gap: 1rem;
   }
 
   .contact-text h1 {
     font-size: 3rem;
   }
+  
+.hero-apply-btn {
+  padding: 10px 15px;
+}
+
+.hero-contact-btn {
+  padding: 10px 15px;
+}
+
+ .hero-image{
+    width:260px;
+    display:block;
+}
 }
 
 @media (max-width: 768px) {
   .contact-hero {
     flex-direction: column;
-    text-align: center;
-    min-height: auto;
-    padding: 3rem 1.25rem 0 3rem;
-  }
-
-  .contact-text {
-    width: 100%;
     align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 3rem 1.25rem 0 1.25rem;
   }
 
-  .hero-brand {
-    justify-content: center;
-  }
+.contact-text {
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
 
 .hero-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.5rem;
@@ -479,6 +497,12 @@ transition: 0.3s ease;
 }
 
 @media (max-width: 480px) {
+    .contact-hero {
+        padding: 5rem 1.25rem 0 1.25rem;
+    align-items: center;
+    justify-content: center;
+  }
+
   .contact-text h1 {
     font-size: 2rem;
   }
@@ -486,7 +510,10 @@ transition: 0.3s ease;
   .contact-text p {
     font-size: 0.95rem;
   }
-
+ hero-button {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
   .hero-apply-btn,
   .hero-contact-btn {
     width: 100%;
