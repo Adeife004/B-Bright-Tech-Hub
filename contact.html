@@ -216,11 +216,21 @@
     </div>
 
 
-    <!-- Right Image -->
+    <!-- Right Image 
     <div class="hero-image">
         <img src="asset/mrsB.png" alt="Bright Tech Hub Representative">
     </div>
+-->
+    <div class="hero-image">
+  <canvas id="wiring-canvas" class="wiring-canvas"></canvas>
 
+  <span class="deco-ring"></span>
+  <span class="deco-dot"></span>
+
+  <div class="blob-image-wrap">
+    <img src="asset/mrsB.png" alt="Bright Tech Hub Representative">
+  </div>
+</div>
   </main>
 
 
@@ -528,6 +538,77 @@
       AOS.init({ once: true, offset: 60 });
     </script>
     <script src="/scripts/index.js"></script>
+
+    <script>
+(function () {
+  const canvas = document.getElementById('wiring-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const wrap = canvas.parentElement;
+  let particles = [];
+
+  const colors = ['#2a9d8f', '#eea317', '#1f6f78'];
+
+  function resize() {
+    canvas.width = wrap.clientWidth;
+    canvas.height = wrap.clientHeight;
+    initParticles();
+  }
+
+  function initParticles() {
+    const count = Math.max(18, Math.floor((canvas.width * canvas.height) / 9000));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      r: Math.random() * 2 + 1.5,
+      color: colors[Math.floor(Math.random() * colors.length)]
+    }));
+  }
+
+  function step() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // update + draw particles
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+    });
+
+    // draw connecting lines between nearby particles
+    const maxDist = Math.max(80, canvas.width * 0.12);
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < maxDist) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(42, 157, 143, ${1 - dist / maxDist})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  step();
+})();
+</script>
 </body>
 
 </html>
