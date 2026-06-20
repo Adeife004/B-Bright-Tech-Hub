@@ -32,93 +32,168 @@
     <link rel="stylesheet" href="./styles/about.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <!-- LEFT: Logo -->
-        <div class="navbar__logo">
-          <a href="#" aria-label="B Bright Tech Hub Home">
-            <img src="asset/logo.webp" alt="B Bright Tech Hub Logo" />
-          </a>
-        </div>
+   <header class="site-header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <!-- LEFT: Logo -->
+            <div class="navbar__logo">
+                <a href="#" aria-label="B Bright Tech Hub Home">
+                    <img src="asset/logo.png" alt="B Bright Tech Hub Logo" />
+                </a>
+            </div>
 
-        <!-- CENTER: Nav links -->
-        <ul class="navbar__links" id="nav-menu">
-          <li><a href="index.html" class="navbar__link">Home</a></li>
-          <li><a href="about.html" class="navbar__link">About</a></li>
-          <li><a href="services.html" class="navbar__link">Services</a></li>
-          <li><a href="contact.html" class="navbar__link">Contact</a></li>
-          <li class="navbar__dropdown" id="pages-dropdown">
-            <button
-              class="navbar__link navbar__dropdown-toggle"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Pages
-              <svg
-                class="navbar__chevron"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <ul class="navbar__dropdown-menu" role="menu">
-              <li role="none">
-                <a
-                  href="testimonials.html"
-                  class="navbar__dropdown-item"
-                  role="menuitem"
-                >
-                  <i class="fa-regular fa-star" aria-hidden="true"></i>
-                  Testimonials
-                </a>
-              </li>
-              <li role="none">
-                <a
-                  href="programmes.html"
-                  class="navbar__dropdown-item"
-                  role="menuitem"
-                >
-                  <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                  Programmes
-                </a>
-              </li>
+            <!-- CENTER: Nav links -->
+            <ul class="navbar__links" id="nav-menu">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
+                <li class="navbar__dropdown navbar__dropdown--mega" id="services-dropdown">
+                    <button class="navbar__link navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Services
+                        <svg class="navbar__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="mega-menu" role="menu">
+                        <div class="mega-menu__grid">
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Tech Skills Training
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#digital-literacy" role="menuitem">Digital Literacy</a>
+                                    </li>
+                                    <li><a href="services.html#web-development" role="menuitem">Web Development</a></li>
+                                    <li><a href="services.html#ui-ux-design" role="menuitem">UI/UX Design</a></li>
+                                    <li><a href="services.html#data-analysis" role="menuitem">Data Analysis</a></li>
+                                    <li><a href="services.html#vibe-coding" role="menuitem">
+                                            Vibe Coding <span class="mega-menu__tag">New</span>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-robot" aria-hidden="true"></i> Emerging Technologies
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#robotics" role="menuitem">Robotics</a></li>
+                                    <li><a href="services.html#vr-ar" role="menuitem">VR &amp; AR</a></li>
+                                    <li><a href="services.html#game-development" role="menuitem">Game Development</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-cube" aria-hidden="true"></i> Creative Media
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#3d-modelling" role="menuitem">3D Modelling</a></li>
+                                    <li><a href="services.html#2d-animation" role="menuitem">2D Animation</a></li>
+                                </ul>
+
+<h3 class="mega-menu__col-title mega-menu__col-title--spaced">
+                                    <i class="fa-solid fa-calendar-week" aria-hidden="true"></i> Learning Programs
+                                </h3>
+                                <ul>
+                                    <li><a href="after-school.html" role="menuitem">After-School Classes</a></li>
+                                    <li><a href="services.html#weekend-classes" role="menuitem">Weekend Classes</a></li>
+                                    <li><a href="services.html#holiday-classes" role="menuitem">Holiday Classes</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__col">
+                                <h3 class="mega-menu__col-title">
+                                    <i class="fa-solid fa-school" aria-hidden="true"></i> School Solutions
+                                </h3>
+                                <ul>
+                                    <li><a href="services.html#in-school-coding" role="menuitem">In-School Coding
+                                            Programs</a></li>
+                                    <li><a href="services.html#in-school-robotics" role="menuitem">In-School Robotics
+                                            Programs</a></li>
+                                    <li><a href="services.html#teacher-training" role="menuitem">Teacher Training</a>
+                                    </li>
+                                    <li><a href="services.html#educational-consultation" role="menuitem">Educational
+                                            Consultation</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- mega menu footer strip -->
+                        <div class="mega-menu__footer">
+                            <div class="mega-menu__footer-text">
+                                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                Not sure where to start? We'll help you find the right fit.
+                            </div>
+                            <a href="contact.html" class="mega-menu__footer-link">
+                                Talk to us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__dropdown" id="pages-dropdown">
+                    <button class="navbar__link navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                        <svg class="navbar__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <ul class="navbar__dropdown-menu" role="menu">
+                        <li role="none">
+                            <a href="testimonials.html" class="navbar__dropdown-item" role="menuitem">
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                                Testimonials
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="programmes.html" class="navbar__dropdown-item" role="menuitem">
+                                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                                Programmes
+                            </a>
+                        </li>
+
+</ul>
+                <li class="mobile-cta-row" aria-hidden="false">
+                    <a href="login.html" class="btn-login">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i> Login
+                    </a>
+                    <a href="apply.html" class="btn-apply">
+                        Apply Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+                </li>
             </ul>
-          </li>
-        </ul>
 
-        <!-- RIGHT: CTA buttons -->
-        <div class="navbar__actions">
-          <a href="login.html" class="btn-login">
-            <i class="fa-regular fa-user" aria-hidden="true"></i>
-            Login
-          </a>
-          <a href="apply.html" class="btn-apply">
-            Apply Now
-            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
+            <!-- RIGHT: CTA buttons -->
+            <div class="navbar__actions">
+                <a href="login.html" class="btn-login">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    Login
+                </a>
+                <a href="apply.html" class="btn-apply">
+                    Apply Now
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
 
-        <!-- Hamburger (mobile only) -->
-        <button
-          class="navbar__hamburger"
-          id="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </nav>
+            <!-- Hamburger (mobile only) -->
+            <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="ham-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+        </nav>
     </header>
     <section class="hero">
       <div class="text">
@@ -158,7 +233,7 @@
       <h1>OUR FOUNDATION: MISSION & VISION</h1>
       <div class="about-foundation">
         <div class="about-mission">
-          <h1>MISSION</h1>
+          <h3>MISSION</h3>
           <p>
             ​At B Bright Tech Hub, our mission is to ignite curiosity, inspire
             innovation, and empower young minds through a holistic and hands-on
@@ -166,7 +241,7 @@
           </p>
         </div>
         <div class="about-vision">
-          <h1>VISION</h1>
+          <h3>VISION</h3>
           <p>
             ​We envision a future where every child has the opportunity to
             explore, innovate, and excel in the fields of science, technology,
@@ -217,6 +292,210 @@
         </div>
       </div>
     </div>
+    <div class="about-us">
+      <div class="about-us-head">
+        <h2>Why Choose B Bright Tech?</h2>
+        <p>
+          Empowering learners with practical technology skills, innovative
+          teaching methods, and industry-relevant knowledge.
+        </p>
+      </div>
+      <div class="about-us-container">
+        <div class="about-us-card">
+          <h3>Industry-Relevant Skills</h3>
+          <p>Learn technologies and digital skills that are in demand today.</p>
+        </div>
+        <div class="about-us-card">
+          <h3>Experienced Instructors</h3>
+          <p>Receive guidance and mentorship from passionate professionals.</p>
+        </div>
+        <div class="about-us-card">
+          <h3>Hands-On Learning</h3>
+          <p>Build real projects and gain practical experience.</p>
+        </div>
+        <div class="about-us-card">
+          <h3>Future-Ready Education</h3>
+          <p>Develop skills needed to thrive in the digital economy.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-cta">
+      <div class="about-cta-content">
+    <h2>Ready to Start Your Tech Journey?</h2>
+    <p>
+      Empower yourself or your child with practical digital skills, hands-on learning,
+      and expert guidance at B Bright Tech. Let’s build the future together.
+    </p>
+
+    <div class="about-cta-buttons">
+      <a href="programmes.html" class="cta-btn primary-btn">Explore Courses</a>
+      <a href="contact.html" class="cta-btn secondary-btn">Contact Us</a>
+    </div>
+  </div>
+
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer__inner">
+        <!-- brand column -->
+        <div class="footer__brand">
+          <a
+            href="index.html"
+            class="footer__logo-link"
+            aria-label="B Bright Tech Hub home"
+          >
+            <img src="asset/logo.png" alt="B Bright Tech Hub" />
+          </a>
+          <p class="footer__tagline">
+            The place where tech careers are built. Come learn, build, and grow
+            with us.
+          </p>
+          <div class="footer__socials" aria-label="Social media links">
+            <a
+              href="#"
+              class="footer__social"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#"
+              class="footer__social"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#"
+              class="footer__social"
+              aria-label="X / Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#"
+              class="footer__social"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a
+              href="#"
+              class="footer__social"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- quick links -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <div class="footer__col">
+            <h3 class="footer__col-title">Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="programmes.html">Programmes</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__col-title">Programmes</h3>
+            <ul>
+              <li><a href="july-of-tech.html">July of Tech</a></li>
+              <li><a href="summer-classes.html">Summer Classes</a></li>
+              <li><a href="after-school.html">After School</a></li>
+              <li><a href="programmes.html">All Programmes</a></li>
+              <li><a href="apply.html">Apply Now</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__col-title">Contact</h3>
+            <ul class="footer__contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>123 Tech Avenue, Lagos, Nigeria</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+2340000000000">+234 000 000 0000</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:hello@bbrighttechhub.com"
+                  >hello@bbrighttechhub.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- bottom bar -->
+      <div class="footer__bottom">
+        <p>
+          &copy; <span id="footer-year"></span> B Bright Tech Hub. All rights
+          reserved.
+        </p>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+     SCROLL TO TOP BUTTON
+     ============================================================ -->
+
+    <button
+      class="scroll-top"
+      id="scroll-top"
+      aria-label="Scroll back to top"
+      title="Back to top"
+    >
+      <span class="scroll-top__ring" aria-hidden="true"></span>
+      <svg
+        class="scroll-top__arrow"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+      <svg class="scroll-top__progress" viewBox="0 0 42 42" aria-hidden="true">
+        <circle class="scroll-top__track" cx="21" cy="21" r="18" />
+        <circle
+          class="scroll-top__fill"
+          cx="21"
+          cy="21"
+          r="18"
+          id="scroll-progress-ring"
+        />
+      </svg>
+    </button>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
       integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0afc/yuadhlzz0nK6YRC/MVaLFZVZosyIQ/gYt5phA=="

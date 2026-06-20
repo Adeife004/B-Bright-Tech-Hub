@@ -45,29 +45,43 @@
   font-size: 3.5rem;
   font-family: "Exo 2", sans-serif;
 }
-/* About Styling */
+/* About US Styling */
 .about-container {
   display: flex;
-  justify-content: space-around;
-  gap: 80px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
   padding: 56px;
+  flex-wrap: wrap;
 }
 
 .about-text {
-  width: 500px;
-  height: auto;
+  flex: 1;
+  min-width: 280px;
+  max-width: 550px;
   line-height: 2;
   font-family: "Poppins", sans-serif;
   color: #5f737d;
   font-weight: 400;
 }
-.about-text h1 {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 800;
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
 }
 
 .about-image img {
-  width: 500px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+}
+
+.about-text h1 {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 800;
 }
 .about-card {
   font-family: "Poppins", sans-serif;
@@ -76,41 +90,37 @@
 .about-card h1 {
   text-align: center;
 }
+/* Mission & Vision Styles */
 .about-foundation {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 1.5rem 5rem;
-  font-size: 14px;
-  line-height: 1.6;
+  padding: 2rem 5rem;
+  align-items: stretch;
 }
-.about-mission {
-  background-color: #fff;
-  width: 450px;
-  box-shadow:
-    0 10px 32px rgba(55, 143, 132, 0.55),
-    0 0 0 6px rgba(55, 143, 132, 0.12);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  padding: 8px;
-  border-top: 5px solid #378f84;
-}
+
+.about-mission,
 .about-vision {
   background-color: #fff;
-  width: 450px;
-  box-shadow:
-    0 10px 32px rgba(55, 143, 132, 0.55),
-    0 0 0 6px rgba(55, 143, 132, 0.12);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  padding: 8px;
-  border-top: 5px solid #378f84;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  box-shadow: 0 10px 32px rgba(55, 143, 132, 0.18);
+  border-top: 5px solid var(--clr-teal-md);
+  border-radius: 24px 24px 16px 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 15px;
+  color: var(--text-dark);
+  height: 100%;
 }
-.about-team{
+.about-mission h3,
+.about-vision h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: var(--clr-teal-md);
+  margin-bottom: 1rem;
+}
+/* Our Team Styles */
+.about-team {
   padding: 100px 8%;
   background: #f9fbf9;
 }
@@ -125,11 +135,11 @@
   padding: 35px 12px;
 }
 .about-team-image {
-background: white;
+  background: white;
   padding: 35px 25px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.4s ease;
   border-top: 5px solid #378f84;
 }
@@ -141,22 +151,364 @@ background: white;
   border: 4px solid #378f84;
   margin-bottom: 20px;
 }
-.about-team-image:hover{
+.about-team-image:hover {
   transform: translateY(-10px);
-   box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
 }
-.team-text{
+.team-text {
   color: #5f737d;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   font-size: 1.3rem;
 }
-.team-text p{
-   color: #666;
+.team-text p {
+  color: #666;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
 }
-.team-text h3{
+.team-text h3 {
   color: #0f172a;
   font-size: 22px;
   font-family: "Poppins", sans-serif;
+}
+/* Why Choose Us styles */
+.about-us {
+  padding: 50px 8%;
+  background: #fff;
+}
+.about-us-head {
+  text-align: center;
+  padding-bottom: 32px;
+}
+.about-us-head h2 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 2rem;
+  color: var(--clr-teal);
+}
+.about-us-head p {
+  color: #666;
+}
+.about-us-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.about-us-card {
+  background: #f9fbf9;
+  padding: 16px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  border-bottom: 4px solid #378f84;
+  font-family: "Poppins", sans-serif;
+}
+.about-us-card p {
+  font-size: 14px;
+  color: #5f737d;
+}
+.about-us-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+/* Call to Action Style */
+.about-cta {
+  padding: 100px 8%;
+  background-color: var(--clr-teal);
+  border-radius: 30px;
+  margin: 80px 8%;
+  text-align: center;
+}
+
+.about-cta-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.about-cta h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 0.95;
+}
+
+.about-cta p {
+  color: #f9fbf9;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #c9a56f;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.secondary-btn:hover {
+  background: #fff;
+  color: var(--clr-teal-md);
+  transform: translateY(-3px);
+}
+
+.about-cta h2 {
+  font-size: 2.2rem;
+}
+
+.about-cta p {
+  font-size: 0.95rem;
+}
+
+/* TABLET RESPONSIVENESS */
+@media (max-width: 992px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .text {
+    padding: 20px;
+  }
+
+  .text h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 700px;
+  }
+  .about-image {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  .about-foundation {
+    padding: 2rem;
+  }
+
+  .about-team {
+    padding: 80px 5%;
+  }
+
+  .about-us {
+    padding: 60px 5%;
+  }
+
+  .about-cta {
+    margin: 60px 5%;
+    padding: 70px 5%;
+  }
+
+  .about-cta h2 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .about-cta p {
+    line-height: 1.6;
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .text {
+    padding: 16px;
+  }
+
+  .text h1 {
+    font-size: 2.2rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+  }
+
+  .about-container {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  .about-text {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .about-text h1,
+  .about-card h1,
+  .about-us-head h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-foundation {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+
+  .about-mission,
+  .about-vision {
+    padding: 1.5rem 1rem;
+    font-size: 14px;
+  }
+
+  .about-mission h3,
+  .about-vision h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-team {
+    padding: 70px 5%;
+  }
+
+  .about-team-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .about-team-image {
+    padding: 28px 20px;
+  }
+
+  .about-team-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-text {
+    font-size: 1.1rem;
+  }
+
+  .team-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .team-text p {
+    font-size: 13px;
+  }
+
+  .about-us {
+    padding: 50px 5%;
+  }
+
+  .about-us-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-us-card {
+    padding: 20px 16px;
+  }
+
+  .about-cta {
+    margin: 40px 16px;
+    padding: 50px 20px;
+    border-radius: 20px;
+  }
+
+  .about-cta h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .about-cta p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text h1,
+  .about-card h1,
+  .about-us-head h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .about-mission h3,
+  .about-vision h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-team-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-cta p {
+    font-size: 0.9rem;
+  }
 }
