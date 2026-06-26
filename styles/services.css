@@ -98,10 +98,9 @@
   .services-hero-card {
     position: relative;
     flex-shrink: 0;
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
   }
-
   .services-hero-card__shape {
     position: relative;
     width: 100%;
