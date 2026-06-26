@@ -31,65 +31,27 @@ body {
 /* hero section */
 .contact-hero {
   min-height: 70vh;
-  background: url("../asset/contactbg.png") center/cover no-repeat;
+  background-image:
+    radial-gradient(circle at 30% 20%,
+      rgba(42, 157, 143, 0.18) 0%,
+      transparent 45%),
+    radial-gradient(circle at 80% 80%,
+      rgba(238, 163, 23, 0.12) 0%,
+      transparent 40%),
+    radial-gradient(circle at 50% 50%,
+      rgba(42, 157, 143, 0.08) 0%,
+      transparent 60%),
+    linear-gradient(135deg,
+      #07161a 0%,
+      #081b20 30%,
+      #061217 70%,
+      #040b10 100%);
   display: flex;
   align-items: center;
   gap: 2rem;
   padding-top: clamp(2rem, 5vw, 6rem);
   padding-left: clamp(2rem, 5vw, 6rem);
   padding-right: clamp(2rem, 5vw, 6rem);
-}
-
-/* hero logo */
-.hero-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.logo-mark {
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 32px;
-  height: 38px;
-}
-
-/* Faux logo geometric dots and curves */
-.logo-mark::before {
-  content: "B";
-  font-family: "Outfit", sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--accent);
-  position: absolute;
-  left: 0;
-  line-height: 1;
-  background: linear-gradient(to bottom, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-title {
-  font-family: "Outfit", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #d1e7e4;
-  letter-spacing: 0.5px;
-}
-
-.brand-subtitle {
-  font-family: "Outfit", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #f2911b;
 }
 
 /* hero text */
@@ -100,10 +62,34 @@ body {
   flex-direction: column;
 }
 
-.contact-text h1 {
+#breakText {
   font-size: 3.5rem;
-  color: var(--light);
-  margin-bottom: 20px;
+  background: linear-gradient(90deg,
+      #43d8c9 0%,
+      #2a9d8f 40%,
+      #9fb36f 75%,
+      #f2b94b 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  overflow: visible;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  font-family: poppins;
+}
+
+.cursor {
+  font-size: 2.5rem;
+  color: #2a9d8f;
+  animation: blink .8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .contact-text p {
@@ -171,20 +157,6 @@ body {
 }
 
 /* Hero image */
-/* 
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  display: block;
-} */
 .hero-image {
   position: relative;
   flex: 1;
@@ -192,112 +164,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 480px;
-  overflow: visible;
-}
-
-/* ---------- Plexus / wiring canvas behind the blob ---------- */
-.wiring-canvas {
-  position: absolute;
-  inset: -20%;
-  width: 140%;
-  height: 140%;
-  z-index: 0;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-/* ---------- Organic blob-shaped image ---------- */
-.blob-image-wrap {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 460px;
-  aspect-ratio: 1 / 0.95;
+  border-radius: 30px;
+  padding: 2rem;
   overflow: hidden;
-  border-top: 2px solid var(--accent);
-  border-right: 2px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: 62% 38% 47% 53%;
-  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.3);
 }
 
-.blob-image-wrap img {
-  position: absolute;
-  inset: 0;
+.hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* ---------- Decorative dashed ring (top-right accent) ---------- */
-.deco-ring {
-  position: absolute;
-  top: 6%;
-  right: 2%;
-  width: 70px;
-  height: 70px;
-  border: 2px dashed var(--accent);
-  border-radius: 50%;
-  z-index: 3;
-  animation: ringSpin 12s linear infinite;
-}
-
-@keyframes ringSpin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ---------- Decorative solid dot (bottom-left accent) ---------- */
-.deco-dot {
-  position: absolute;
-  bottom: 10%;
-  left: 6%;
-  width: 22px;
-  height: 22px;
-  background: var(--accent);
-  border-radius: 50%;
-  z-index: 3;
-  box-shadow: 0 0 0 0 rgba(242, 145, 27, 0.6);
-  animation: dotPulse 2.4s ease-in-out infinite;
-}
-
-@keyframes dotPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(242, 145, 27, 0.5);
-  }
-
-  70% {
-    box-shadow: 0 0 0 14px rgba(242, 145, 27, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(242, 145, 27, 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .blob-image-wrap,
-  .deco-ring,
-  .deco-dot,
-  .wiring-canvas {
-    animation: none !important;
-  }
-}
-
-/* orange corner */
-.orange-corner {
-  position: absolute;
-  bottom: -50px;
-  right: -80px;
-  width: 250px;
-  height: 120px;
-  background-color: #f2911b;
-  border-radius: 50% 50% 0 0;
-  transform: rotate(-15deg);
-  z-index: 2;
 }
 
 /* Container for the contact form */
@@ -306,6 +180,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: clamp(1.5rem, 4vw, 5rem);
+  place-items: center;
 }
 
 .container h2 {
@@ -716,8 +591,23 @@ body {
 
 /* ---------- Tablets / hero stacks vertically ---------- */
 @media (max-width: 768px) {
+.contact-hero{
+  padding-top: 100px;
+}
+  #breakText,
+  .cursor {
+    font-size: 40px;
+  }
+
+  .contact-text p {
+    line-height: 30px;
+  }
+
+  .hero-button {
+    flex-direction: column;
+  }
+
   .hero-image {
-    margin-left: 100px;
     width: 100%;
     min-height: 320px;
     margin-top: 1.5rem;
@@ -747,6 +637,14 @@ body {
     width: 16px;
     height: 16px;
   }
+  .map-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  margin: 0 2rem 2rem;
+  padding: 40px;
+  box-sizing: border-box;
+}
 }
 
 /* ---------- Phones ---------- */
